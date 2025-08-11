@@ -14341,6 +14341,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -44025399
       objectReference: {fileID: 0}
+    - target: {fileID: 2440844624711060802, guid: c5bdca1933fde624698bb8c6d6daa44b,
+        type: 3}
+      propertyPath: lerpSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6250821296113964330, guid: c5bdca1933fde624698bb8c6d6daa44b,
         type: 3}
       propertyPath: m_SortingLayer
