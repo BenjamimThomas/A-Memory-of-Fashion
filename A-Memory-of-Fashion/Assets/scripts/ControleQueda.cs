@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControleQueda : MonoBehaviour
 {
-    public BlocoCai[] blocos; // arraste aqui no inspetor todos os blocos
+    public BlocoCai[] blocos;
+
 
     public void SoltarTodos()
     {
