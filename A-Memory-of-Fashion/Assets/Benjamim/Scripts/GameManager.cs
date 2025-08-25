@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text vidasText;
     public TMP_Text gameOverText;
     public Image erroFlash;
-
+    public AudioClip somAcerto;
+    public AudioClip somErro;
+    private AudioSource audioSource;
     [Header("Regras")]
     public float tempoLimite = 2f;     // tempo para clicar no alvo
     public int vidasIniciais = 3;      // vidas
@@ -30,12 +32,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         vidas = vidasIniciais;
         scoreText.text = "Acertos: 0";
         vidasText.text = "Vidas: " + vidas;
         gameOverText.gameObject.SetActive(false);
 
         SpawnAlvo();
+        
     }
 
     void SpawnAlvo()
@@ -63,6 +67,7 @@ public class GameManager : MonoBehaviour
         var alvoScript = alvoAtual.GetComponent<Alvo>();
         alvoScript.OnClick += () =>
         {
+            audioSource.PlayOneShot(somAcerto);
             score++;
             scoreText.text = "Acertos: " + score;
 
@@ -85,6 +90,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(alvoAtual);
             PerderVida();
+
         }
     }
     IEnumerator FlashErro()
@@ -96,6 +102,7 @@ public class GameManager : MonoBehaviour
 
     void PerderVida()
     {
+        audioSource.PlayOneShot(somErro);
         vidas--;
         vidasText.text = "Vidas: " + vidas;
         StartCoroutine(FlashErro());
