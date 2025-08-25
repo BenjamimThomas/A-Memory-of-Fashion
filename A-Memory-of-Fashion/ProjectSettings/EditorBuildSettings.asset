@@ -6,16 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu benja.unity
+    path: Assets/Benjamim/Scenes/Menu benja.unity
     guid: def007abccf3c41459ea5c7e5cc8dbc1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/casa.unity
     guid: d9a9fd5182a4025429c97a869864056e
   - enabled: 1
-    path: Assets/Scenes/sala.unity
+    path: Assets/Benjamim/Scenes/Casa 1.unity
+    guid: 912221d449efec2408ba3b72c3e34546
+  - enabled: 1
+    path: Assets/Benjamim/Scenes/sala.unity
     guid: 011a4b53c4b6cec419f89a94a3d10585
   - enabled: 1
-    path: Assets/Scenes/sala1 corredor.unity
+    path: Assets/Benjamim/Scenes/sala1 corredor.unity
     guid: f76d11c89bbcc5d45b414a7db06aca69
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
