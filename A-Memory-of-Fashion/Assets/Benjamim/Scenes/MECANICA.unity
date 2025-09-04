@@ -657,7 +657,7 @@ MonoBehaviour:
   erroFlash: {fileID: 1266767188}
   somAcerto: {fileID: 8300000, guid: 44766caa059435f4fb71af84b2bea7e4, type: 3}
   somErro: {fileID: 8300000, guid: 9b30d51da439e4c8d95fbdfcf5efebff, type: 3}
-  tempoLimite: 1.56
+  tempoLimite: 1
   vidasIniciais: 5
   spawnAnimDuration: 0.2
   margem: {x: 20, y: 20}
