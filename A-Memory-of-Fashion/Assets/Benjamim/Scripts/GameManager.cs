@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
-        gameOverText.text = "Voce e seus homens falharam\nPontuação: " + score;
+        gameOverText.text = "Voce falhou\nPontuação: " + score;
 
         if (audioSource && somGameOver) audioSource.PlayOneShot(somGameOver);
     }
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         if (vitoriaText)
         {
             vitoriaText.gameObject.SetActive(true);
-            vitoriaText.text = "Parabéns, vocês conseguiu saquear Constantinopla\nPontuação: " + score;
+            vitoriaText.text = "Parabéns, vocês conseguiu \nPontuação: " + score;
         }
 
         if (audioSource && somVitoria) audioSource.PlayOneShot(somVitoria);

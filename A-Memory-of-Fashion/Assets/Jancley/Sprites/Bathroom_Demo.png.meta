@@ -697,7 +697,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bathroom_Demo_0: -6204269960211033689
+      Bathroom_Demo_1: 6530699276883202224
+      Bathroom_Demo_10: 6927390683896014584
+      Bathroom_Demo_11: -209116002895047472
+      Bathroom_Demo_12: -5936942313168654073
+      Bathroom_Demo_13: -445702631073182296
+      Bathroom_Demo_14: -7212500055202132947
+      Bathroom_Demo_15: 7807494834738659726
+      Bathroom_Demo_16: 98917359866817000
+      Bathroom_Demo_17: 7811265051933152092
+      Bathroom_Demo_18: 5020153610899092983
+      Bathroom_Demo_19: -7660203086106813980
+      Bathroom_Demo_2: -3288745503388787847
+      Bathroom_Demo_20: 2824930807894842816
+      Bathroom_Demo_21: -367675815974538259
+      Bathroom_Demo_22: 4622847944729379915
+      Bathroom_Demo_3: 7952442840478129634
+      Bathroom_Demo_4: 1300256047335017638
+      Bathroom_Demo_5: -7067840452811937342
+      Bathroom_Demo_6: -6332957414575157940
+      Bathroom_Demo_7: 6235364070810665570
+      Bathroom_Demo_8: -7423936272785181365
+      Bathroom_Demo_9: 6177958853226100632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
