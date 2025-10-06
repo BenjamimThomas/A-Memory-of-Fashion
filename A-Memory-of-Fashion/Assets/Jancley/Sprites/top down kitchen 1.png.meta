@@ -1,0 +1,980 @@
+fileFormatVersion: 2
+guid: fcbc540fcd53c6a49877f2e98ed2239f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5033755201546252215
+    second: top down kitchen 1_0
+  - first:
+      213: -7938770713779521231
+    second: top down kitchen 1_1
+  - first:
+      213: 5596726513948877986
+    second: top down kitchen 1_2
+  - first:
+      213: -200366423017872857
+    second: top down kitchen 1_3
+  - first:
+      213: -4628441258965932045
+    second: top down kitchen 1_4
+  - first:
+      213: -5284516226968866948
+    second: top down kitchen 1_5
+  - first:
+      213: -6832645331901500918
+    second: top down kitchen 1_6
+  - first:
+      213: -2833216736421784487
+    second: top down kitchen 1_7
+  - first:
+      213: -2181622007160044808
+    second: top down kitchen 1_8
+  - first:
+      213: -1826272990407078344
+    second: top down kitchen 1_9
+  - first:
+      213: -1060751591681336314
+    second: top down kitchen 1_10
+  - first:
+      213: -9097992821287739362
+    second: top down kitchen 1_11
+  - first:
+      213: -7413991379347446922
+    second: top down kitchen 1_12
+  - first:
+      213: -1980440516479933691
+    second: top down kitchen 1_13
+  - first:
+      213: 3607324049554392443
+    second: top down kitchen 1_14
+  - first:
+      213: 7401469886581125946
+    second: top down kitchen 1_15
+  - first:
+      213: -8578820839567855719
+    second: top down kitchen 1_16
+  - first:
+      213: 4922467974699422753
+    second: top down kitchen 1_17
+  - first:
+      213: -3902527451923247702
+    second: top down kitchen 1_18
+  - first:
+      213: 1498822276956476924
+    second: top down kitchen 1_19
+  - first:
+      213: 8809796379897978500
+    second: top down kitchen 1_20
+  - first:
+      213: -5141718817561030241
+    second: top down kitchen 1_21
+  - first:
+      213: -1195276974335030019
+    second: top down kitchen 1_22
+  - first:
+      213: 7840380150364198117
+    second: top down kitchen 1_23
+  - first:
+      213: 7697735108424699183
+    second: top down kitchen 1_24
+  - first:
+      213: 2586359462197700974
+    second: top down kitchen 1_25
+  - first:
+      213: -3600649560151896390
+    second: top down kitchen 1_26
+  - first:
+      213: -9091571016756140
+    second: top down kitchen 1_27
+  - first:
+      213: 1898143515847986720
+    second: top down kitchen 1_28
+  - first:
+      213: -7270535861138605707
+    second: top down kitchen 1_29
+  - first:
+      213: 5336021078091091328
+    second: top down kitchen 1_30
+  - first:
+      213: -7246132444819874641
+    second: top down kitchen 1_31
+  - first:
+      213: 8530043835308254402
+    second: top down kitchen 1_32
+  - first:
+      213: -3829665248276339060
+    second: top down kitchen 1_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: top down kitchen 1_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 534
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf60729fad7bd540800000000000000
+      internalID: 5033755201546252215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 541
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139b5e3e812d3d190800000000000000
+      internalID: -7938770713779521231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_2
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 558
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4eee89c119bad40800000000000000
+      internalID: 5596726513948877986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_3
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 569
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722aa13ccc7283df0800000000000000
+      internalID: -200366423017872857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_4
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 568
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7e29f823974cfb0800000000000000
+      internalID: -4628441258965932045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_5
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 569
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7fabb97d70a9a6b0800000000000000
+      internalID: -5284516226968866948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_6
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 504
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02b7c385419d21a0800000000000000
+      internalID: -6832645331901500918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_7
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 502
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95453e5a3646ea8d0800000000000000
+      internalID: -2833216736421784487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 505
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f20d0dd75259b1e0800000000000000
+      internalID: -2181622007160044808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 452
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e45e72466c7a6e0800000000000000
+      internalID: -1826272990407078344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_10
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 452
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c57e62c047741f0800000000000000
+      internalID: -1060751591681336314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_11
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 468
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1027167bbf6db180800000000000000
+      internalID: -9097992821287739362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 346
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673ef2a1f163c1990800000000000000
+      internalID: -7413991379347446922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_13
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 356
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5032c64d7df0484e0800000000000000
+      internalID: -1980440516479933691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_14
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 353
+        width: 13
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75c9635c1acf0230800000000000000
+      internalID: 3607324049554392443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_15
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 386
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a333b6da5ad47b660800000000000000
+      internalID: 7401469886581125946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_16
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 386
+        width: 11
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fe6d126e7e1f880800000000000000
+      internalID: -8578820839567855719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_17
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 312
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124123aea8e105440800000000000000
+      internalID: 4922467974699422753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_18
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 310
+        width: 13
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad87ed75ff67d9c0800000000000000
+      internalID: -3902527451923247702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_19
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 253
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5de677be2ecc410800000000000000
+      internalID: 1498822276956476924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_20
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 251
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e5757912fa24a70800000000000000
+      internalID: 8809796379897978500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_21
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 236
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9155583af1f4a8b0800000000000000
+      internalID: -5141718817561030241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_22
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 230
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc8e88bce5896fe0800000000000000
+      internalID: -1195276974335030019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_23
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 194
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e45b76e430aecc60800000000000000
+      internalID: 7840380150364198117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_24
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 194
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d05b8fb49d3da60800000000000000
+      internalID: 7697735108424699183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_25
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 195
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69a3cd4a3894e320800000000000000
+      internalID: 2586359462197700974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_26
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 196
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abeca765d4ce70ec0800000000000000
+      internalID: -3600649560151896390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_27
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 196
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454981ba343bfdff0800000000000000
+      internalID: -9091571016756140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_28
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 163
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e84da887f875a10800000000000000
+      internalID: 1898143515847986720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_29
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 166
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579381eb72ed91b90800000000000000
+      internalID: -7270535861138605707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_30
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 168
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dcd9926ea5d0a40800000000000000
+      internalID: 5336021078091091328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_31
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 167
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac141fdee0907b90800000000000000
+      internalID: -7246132444819874641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_32
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 131
+        width: 55
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c42f029cadc06670800000000000000
+      internalID: 8530043835308254402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top down kitchen 1_33
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 132
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86a4d34fbb4adac0800000000000000
+      internalID: -3829665248276339060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
