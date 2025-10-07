@@ -1122,7 +1122,47 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      home_pack_0: -2013553165074859546
+      home_pack_1: 7772928046960077704
+      home_pack_10: 8032591398350198904
+      home_pack_11: -6435434103894560197
+      home_pack_12: 3166633008081054904
+      home_pack_13: 5879193296203844673
+      home_pack_14: 4594914509170316635
+      home_pack_15: 5882372070863236509
+      home_pack_16: 751536201977893679
+      home_pack_17: 5153725425271566649
+      home_pack_18: -8103787738375266934
+      home_pack_19: 9106275231416070610
+      home_pack_2: 7316347800625445838
+      home_pack_20: -8104910578144704275
+      home_pack_21: 6663382222630881202
+      home_pack_22: -5386905001018331269
+      home_pack_23: -7143849477606292990
+      home_pack_24: -6931259647515026605
+      home_pack_25: 2066692662027960717
+      home_pack_26: 38907295305526462
+      home_pack_27: -1849431061443359240
+      home_pack_28: 5270437236149942313
+      home_pack_29: -3598613393658164232
+      home_pack_3: 1613068779202541948
+      home_pack_30: 8282896573953894654
+      home_pack_31: 5405071867433859424
+      home_pack_32: 749267943997315503
+      home_pack_33: -4376026571308319498
+      home_pack_34: 1550734635940840379
+      home_pack_35: 1796596116703257683
+      home_pack_36: 3896341653160973172
+      home_pack_37: 318430965243970734
+      home_pack_38: -7349192183381683473
+      home_pack_39: -979426089686985715
+      home_pack_4: 6348670970348705941
+      home_pack_5: 2186366836942782991
+      home_pack_6: -1920587156688472083
+      home_pack_7: -7881053778831638521
+      home_pack_8: -1774178304661911158
+      home_pack_9: -2983187367912838306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using System.Collections;
 
 public class WallChallenge : MonoBehaviour
 {
@@ -12,11 +11,12 @@ public class WallChallenge : MonoBehaviour
     public float knockbackForce = 5f;
 
     [Header("Referências")]
+    public Rigidbody2D rb; // -> setar no inspector (Body Type = Kinematic)
     public TextMeshProUGUI letterText;
     public TextMeshProUGUI timerText;
     public Button clickButton;
-    public Transform player;
 
+    // estado
     private char currentLetter;
     private float currentTime;
     private bool canClick = false;
@@ -24,81 +24,99 @@ public class WallChallenge : MonoBehaviour
     private int wallIndex = 0;
     private Rigidbody2D playerRb;
 
+    void Reset()
+    {
+        // tenta achar o Rigidbody2D automaticamente ao adicionar o componente
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     void Start()
     {
-        clickButton.onClick.AddListener(OnClickWall);
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (clickButton != null) clickButton.onClick.AddListener(OnClickWall);
         clickButton.interactable = false;
         HideUI();
     }
 
+    void FixedUpdate()
+    {
+        // mover com física para evitar tunneling
+        Vector2 newPos = rb.position + Vector2.left * moveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(newPos);
+    }
+
     void Update()
     {
-        // Movimento da parede para a esquerda
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        if (!challengeActive) return;
 
-        // Se estiver ativa, atualiza o tempo
-        if (challengeActive)
+        currentTime -= Time.deltaTime;
+        timerText.text = Mathf.Max(0, currentTime).ToString("F1");
+
+        if (!canClick)
         {
-            currentTime -= Time.deltaTime;
-            timerText.text = currentTime.ToString("F1");
-
+            // aceita a tecla correta (a string "a","s","w","d" funciona com Input.GetKeyDown)
             if (Input.GetKeyDown(currentLetter.ToString().ToLower()))
             {
                 canClick = true;
-                clickButton.interactable = true;
+                if (clickButton != null) clickButton.interactable = true;
             }
+        }
 
-            // Se o tempo acabar e o jogador não tiver desbloqueado
-            if (currentTime <= 0 && !canClick)
+        if (currentTime <= 0f && !canClick)
+        {
+            ApplyKnockback();
+        }
+    }
+
+    // chamado pelo WallActivator (trigger child)
+    public void StartChallenge(Rigidbody2D playerRigidbody, int index = 0)
+    {
+        if (challengeActive) return;
+        playerRb = playerRigidbody;
+        wallIndex = index;
+        challengeActive = true;
+        currentTime = Mathf.Max(3f, startTime - wallIndex * timeDecreasePerWall); // garante mínimo de 3s
+        GenerateRandomLetter();
+        ShowUI();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // colisão física com o jogador (parede corpo -> IsTrigger = false)
+        if (collision.collider.CompareTag("Player"))
+        {
+            if (challengeActive && !canClick)
             {
+                if (playerRb == null) playerRb = collision.rigidbody;
                 ApplyKnockback();
             }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && !challengeActive)
-        {
-            playerRb = other.GetComponent<Rigidbody2D>();
-            player = other.transform;
-            StartChallenge();
-        }
-    }
-
-    void StartChallenge()
-    {
-        challengeActive = true;
-        currentTime = startTime - (wallIndex * timeDecreasePerWall);
-        GenerateRandomLetter();
-        ShowUI();
-    }
-
     void OnClickWall()
     {
-        if (canClick)
-        {
-            Debug.Log("Pulou a parede!");
-            wallIndex++;
-            challengeActive = false;
-            HideUI();
+        if (!canClick) return;
+        // sucesso: passar pela parede
+        challengeActive = false;
+        clickButton.interactable = false;
+        HideUI();
 
-            // Você pode fazer a parede “cair” ou desativar aqui
-            Destroy(gameObject, 2f);
-        }
+        // comportamento: wall "cai" ou é destruída
+        Destroy(gameObject, 1.2f);
     }
 
     void GenerateRandomLetter()
     {
         char[] letters = { 'A', 'S', 'W', 'D' };
         currentLetter = letters[Random.Range(0, letters.Length)];
-        letterText.text = currentLetter.ToString();
+        if (letterText != null) letterText.text = currentLetter.ToString();
     }
 
     void ApplyKnockback()
     {
         if (playerRb != null)
         {
+            // empurra o jogador para a esquerda — ajuste a direção se quiser outro efeito
             playerRb.AddForce(Vector2.left * knockbackForce, ForceMode2D.Impulse);
         }
 
@@ -106,19 +124,21 @@ public class WallChallenge : MonoBehaviour
         GenerateRandomLetter();
         challengeActive = false;
         HideUI();
+        canClick = false;
+        if (clickButton != null) clickButton.interactable = false;
     }
 
     void ShowUI()
     {
-        letterText.gameObject.SetActive(true);
-        timerText.gameObject.SetActive(true);
-        clickButton.gameObject.SetActive(true);
+        if (letterText != null) letterText.gameObject.SetActive(true);
+        if (timerText != null) timerText.gameObject.SetActive(true);
+        if (clickButton != null) clickButton.gameObject.SetActive(true);
     }
 
     void HideUI()
     {
-        letterText.gameObject.SetActive(false);
-        timerText.gameObject.SetActive(false);
-        clickButton.gameObject.SetActive(false);
+        if (letterText != null) letterText.gameObject.SetActive(false);
+        if (timerText != null) timerText.gameObject.SetActive(false);
+        if (clickButton != null) clickButton.gameObject.SetActive(false);
     }
 }

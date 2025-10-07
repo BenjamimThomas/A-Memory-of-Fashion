@@ -397,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      top down kitchen 2_0: -9000363877560315133
+      top down kitchen 2_1: 6755448461309324603
+      top down kitchen 2_10: -7152177466208300147
+      top down kitchen 2_2: -3869910229066952318
+      top down kitchen 2_3: -9117886312858698401
+      top down kitchen 2_4: -5142595301464346344
+      top down kitchen 2_5: -3796138526502442794
+      top down kitchen 2_6: -7726786804754198813
+      top down kitchen 2_7: -3767335478576769781
+      top down kitchen 2_8: -337328498928372971
+      top down kitchen 2_9: -5425509380999285663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
