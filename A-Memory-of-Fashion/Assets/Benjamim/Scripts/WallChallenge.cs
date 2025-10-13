@@ -1,144 +1,90 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
+ï»¿using UnityEngine;
 
 public class WallChallenge : MonoBehaviour
 {
-    [Header("Configurações do Desafio")]
-    public float startTime = 12f;
-    public float timeDecreasePerWall = 1f;
-    public float moveSpeed = 2f;
-    public float knockbackForce = 5f;
+    [Header("Wall Settings")]
+    [SerializeField] private float wallSpeed = 2f;
+    [SerializeField] private float knockbackForce = 8f;
+    [SerializeField] private float resetXPosition = -10f; // posiÃ§Ã£o para resetar
+    [SerializeField] private float startXPosition = 10f;  // posiÃ§Ã£o inicial da parede
 
-    [Header("Referências")]
-    public Rigidbody2D rb; // -> setar no inspector (Body Type = Kinematic)
-    public TextMeshProUGUI letterText;
-    public TextMeshProUGUI timerText;
-    public Button clickButton;
+    private string correctLetter = "w";
+    private bool challengeSuccess = false;
 
-    // estado
-    private char currentLetter;
-    private float currentTime;
-    private bool canClick = false;
-    private bool challengeActive = false;
-    private int wallIndex = 0;
+    [HideInInspector] public bool challengeStarted = false;
+
+    private Transform player;
     private Rigidbody2D playerRb;
-
-    void Reset()
-    {
-        // tenta achar o Rigidbody2D automaticamente ao adicionar o componente
-        rb = GetComponent<Rigidbody2D>();
-    }
+    private GameController gameController;
 
     void Start()
     {
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
-        if (clickButton != null) clickButton.onClick.AddListener(OnClickWall);
-        clickButton.interactable = false;
-        HideUI();
-    }
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        if (player != null)
+            playerRb = player.GetComponent<Rigidbody2D>();
+        else
+            Debug.LogError("ERRO: Player nÃ£o encontrado na cena!");
 
-    void FixedUpdate()
-    {
-        // mover com física para evitar tunneling
-        Vector2 newPos = rb.position + Vector2.left * moveSpeed * Time.fixedDeltaTime;
-        rb.MovePosition(newPos);
+        gameObject.SetActive(false);
+
+        gameController = FindObjectOfType<GameController>();
+        if (gameController == null)
+            Debug.LogError("ERRO: GameController nÃ£o encontrado na cena!");
     }
 
     void Update()
     {
-        if (!challengeActive) return;
+        if (!challengeStarted) return;
 
-        currentTime -= Time.deltaTime;
-        timerText.text = Mathf.Max(0, currentTime).ToString("F1");
+        transform.Translate(Vector2.left * wallSpeed * Time.deltaTime);
 
-        if (!canClick)
+        // Reseta a parede se passar do limite
+        if (transform.position.x <= resetXPosition)
         {
-            // aceita a tecla correta (a string "a","s","w","d" funciona com Input.GetKeyDown)
-            if (Input.GetKeyDown(currentLetter.ToString().ToLower()))
-            {
-                canClick = true;
-                if (clickButton != null) clickButton.interactable = true;
-            }
-        }
-
-        if (currentTime <= 0f && !canClick)
-        {
-            ApplyKnockback();
+            ResetWall();
         }
     }
 
-    // chamado pelo WallActivator (trigger child)
-    public void StartChallenge(Rigidbody2D playerRigidbody, int index = 0)
+    public void StartMovement()
     {
-        if (challengeActive) return;
-        playerRb = playerRigidbody;
-        wallIndex = index;
-        challengeActive = true;
-        currentTime = Mathf.Max(3f, startTime - wallIndex * timeDecreasePerWall); // garante mínimo de 3s
-        GenerateRandomLetter();
-        ShowUI();
+        gameObject.SetActive(true);
+        challengeStarted = true;
+        challengeSuccess = false;
+
+        string[] movementLetters = { "w", "a", "s", "d" };
+        int randomIndex = Random.Range(0, movementLetters.Length);
+        correctLetter = movementLetters[randomIndex];
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void ActivateChallengeUI()
     {
-        // colisão física com o jogador (parede corpo -> IsTrigger = false)
-        if (collision.collider.CompareTag("Player"))
+        if (challengeStarted && !challengeSuccess && gameController != null)
         {
-            if (challengeActive && !canClick)
-            {
-                if (playerRb == null) playerRb = collision.rigidbody;
-                ApplyKnockback();
-            }
+            gameController.ShowChallengeUI(this, correctLetter);
         }
     }
 
-    void OnClickWall()
+    public void ChallengeSuccess()
     {
-        if (!canClick) return;
-        // sucesso: passar pela parede
-        challengeActive = false;
-        clickButton.interactable = false;
-        HideUI();
-
-        // comportamento: wall "cai" ou é destruída
-        Destroy(gameObject, 1.2f);
+        challengeSuccess = true;
+        ResetWall();
     }
 
-    void GenerateRandomLetter()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        char[] letters = { 'A', 'S', 'W', 'D' };
-        currentLetter = letters[Random.Range(0, letters.Length)];
-        if (letterText != null) letterText.text = currentLetter.ToString();
-    }
-
-    void ApplyKnockback()
-    {
-        if (playerRb != null)
+        if (collision.CompareTag("Player") && !challengeSuccess && playerRb != null)
         {
-            // empurra o jogador para a esquerda — ajuste a direção se quiser outro efeito
-            playerRb.AddForce(Vector2.left * knockbackForce, ForceMode2D.Impulse);
+            Vector2 knockbackDir = (player.position - transform.position).normalized;
+            playerRb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
         }
-
-        Debug.Log("Empurrado! Letra mudou!");
-        GenerateRandomLetter();
-        challengeActive = false;
-        HideUI();
-        canClick = false;
-        if (clickButton != null) clickButton.interactable = false;
     }
 
-    void ShowUI()
+    // Reseta a parede para a posiÃ§Ã£o inicial
+    private void ResetWall()
     {
-        if (letterText != null) letterText.gameObject.SetActive(true);
-        if (timerText != null) timerText.gameObject.SetActive(true);
-        if (clickButton != null) clickButton.gameObject.SetActive(true);
-    }
-
-    void HideUI()
-    {
-        if (letterText != null) letterText.gameObject.SetActive(false);
-        if (timerText != null) timerText.gameObject.SetActive(false);
-        if (clickButton != null) clickButton.gameObject.SetActive(false);
+        transform.position = new Vector3(startXPosition, transform.position.y, transform.position.z);
+        gameObject.SetActive(false);
+        challengeStarted = false;
+        challengeSuccess = false;
     }
 }
