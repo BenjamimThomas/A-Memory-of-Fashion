@@ -270,9 +270,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &31378340
 Rigidbody2D:
   serializedVersion: 5
@@ -528,7 +529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 2
 --- !u!1 &183815095
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,9 +788,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &217762399
 Rigidbody2D:
   serializedVersion: 5
@@ -910,7 +911,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 5
 --- !u!1 &279964302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 8
 --- !u!1 &356323744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 9
 --- !u!1 &458913208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 2074917012}
-  wallIndex: 1
 --- !u!1 &474203909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,9 +1627,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &539215163
 Rigidbody2D:
   serializedVersion: 5
@@ -1961,7 +1959,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 3
 --- !u!1 &649269296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,9 +2273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &852407435
 Rigidbody2D:
   serializedVersion: 5
@@ -3092,9 +3090,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &1350068232
 Rigidbody2D:
   serializedVersion: 5
@@ -3320,7 +3319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 4
 --- !u!1 &1717077932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,9 +3558,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &1755587061
 Rigidbody2D:
   serializedVersion: 5
@@ -3599,8 +3598,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1769503930}
+  - component: {fileID: 1769503931}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: GameController1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3621,6 +3621,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769503931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769503929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b4a043b38fc2e4d896c7079ef29fd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 545221201}
+  todasAsParedes:
+  - {fileID: 2074917012}
+  audioSource: {fileID: 0}
+  startSound: {fileID: 0}
 --- !u!1 &1853146989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,9 +3789,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &1853146994
 Rigidbody2D:
   serializedVersion: 5
@@ -3894,7 +3912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 10
 --- !u!1 &2001388240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,9 +4063,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &2001388245
 Rigidbody2D:
   serializedVersion: 5
@@ -4168,7 +4186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 6
 --- !u!1 &2024680225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,9 +4508,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSpeed: 2
-  correctLetter: 
-  meuBotaoDeTeste: {fileID: 0}
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!50 &2064610460
 Rigidbody2D:
   serializedVersion: 5
@@ -4698,10 +4716,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 2
-  correctLetter: a
-  meuBotaoDeTeste: {fileID: 545221201}
+  wallSpeed: 5
   knockbackForce: 2
+  resetXPosition: -10
+  startXPosition: 10
+  challengeStarted: 0
 --- !u!1 &2093332045
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,7 +4854,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentWall: {fileID: 0}
-  wallIndex: 7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
