@@ -486,8 +486,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.37, y: -108.32}
-  m_SizeDelta: {x: 49.09, y: 79.32}
+  m_AnchoredPosition: {x: -208.86, y: -104.97}
+  m_SizeDelta: {x: 49.09, y: 77.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444201050
 MonoBehaviour:
@@ -668,6 +668,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -689,6 +691,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
@@ -713,8 +716,8 @@ Transform:
   m_GameObject: {fileID: 1039079827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0288, y: 0.0209, z: 0}
-  m_LocalScale: {x: 1.8102015, y: 1.4951195, z: 1}
+  m_LocalPosition: {x: 0.0085, y: 0.0311, z: 0}
+  m_LocalScale: {x: 1.8443918, y: 1.498247, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
