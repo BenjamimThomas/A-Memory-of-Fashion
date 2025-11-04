@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 305958150}
   - component: {fileID: 305958149}
   - component: {fileID: 305958151}
+  - component: {fileID: 305958152}
   m_Layer: 0
   m_Name: Creditos
   m_TagString: Untagged
@@ -518,6 +519,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b406a786047d394d979cd682473003e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreditsTrigger
+  creditsSceneName: Creditos
+--- !u!65 &305958152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305958148}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.82, y: 5.62, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &322358956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,8 +2488,8 @@ Transform:
   m_GameObject: {fileID: 1265601214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6416, y: -2.5326, z: 9.94699}
-  m_LocalScale: {x: 0.31667328, y: 0.21439536, z: 1}
+  m_LocalPosition: {x: 6.566, y: -2.619, z: 9.94699}
+  m_LocalScale: {x: 0.33950543, y: 0.23832189, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 694585115}
@@ -2964,8 +2987,8 @@ Transform:
   m_GameObject: {fileID: 1465686489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.05, y: -2.4098, z: 9.94699}
-  m_LocalScale: {x: 0.28138462, y: 0.3001114, z: 1}
+  m_LocalPosition: {x: 0.9848, y: -2.47, z: 9.94699}
+  m_LocalScale: {x: 0.30096897, y: 0.3001114, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 694585115}
@@ -3394,6 +3417,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1610601058}
   - component: {fileID: 1610601057}
+  - component: {fileID: 1610601059}
+  - component: {fileID: 1610601060}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -3475,6 +3500,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1610601059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610601056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8047335205fc384f9dc10f908d25c68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartSceneTrigger
+  casaSceneName: Casa 1
+--- !u!65 &1610601060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610601056}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.820002, y: 5.6199994, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1687490804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3913,7 +3972,7 @@ Transform:
   m_GameObject: {fileID: 1947796248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.3837, y: -2.4427, z: 9.94699}
+  m_LocalPosition: {x: -8.28, y: -2.4427, z: 9.94699}
   m_LocalScale: {x: 0.29071116, y: 0.31713316, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

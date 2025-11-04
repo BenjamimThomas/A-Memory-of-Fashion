@@ -1,16 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditsTrigger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private string creditsSceneName = "Creditos";
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(creditsSceneName);
+        }
     }
 }
