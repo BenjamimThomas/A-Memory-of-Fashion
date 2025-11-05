@@ -7,9 +7,14 @@ public class CreditsTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+
+        if (GameManagerMenu.instance == null || !GameManagerMenu.instance.interactionsEnabled)
         {
-            SceneManager.LoadScene(creditsSceneName);
+            Debug.Log("CreditsTrigger: interações desativadas (clique no espelho primeiro).");
+            return;
         }
+
+        SceneManager.LoadScene(creditsSceneName);
     }
 }

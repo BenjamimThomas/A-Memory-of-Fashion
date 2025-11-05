@@ -3,14 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class StartSceneTrigger : MonoBehaviour
 {
-    [SerializeField] private string casaSceneName = "Casa 1";
+    public string sceneToLoad;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+
+        if (GameManagerMenu.instance == null || !GameManagerMenu.instance.interactionsEnabled)
         {
-            SceneManager.LoadScene(casaSceneName);
+            Debug.Log("StartTrigger: interações desativadas (clique no espelho primeiro).");
+            return;
         }
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
-
