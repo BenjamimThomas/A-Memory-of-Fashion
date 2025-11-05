@@ -1,12 +1,12 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
     public GameObject inventoryUI;
-    public Text itemListText;
+    public TMP_Text itemListText;
 
     private List<string> items = new List<string>();
     private bool inventoryOpen = false;

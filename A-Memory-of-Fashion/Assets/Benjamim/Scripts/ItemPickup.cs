@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    public string itemName; // exemplo: "Vestido" ou "Sapato"
+    public string itemName; 
     private bool playerNear = false;
 
     void Update()
