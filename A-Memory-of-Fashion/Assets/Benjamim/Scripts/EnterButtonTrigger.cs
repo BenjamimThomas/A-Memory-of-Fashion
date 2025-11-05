@@ -2,39 +2,29 @@ using UnityEngine;
 
 public class EnterButtonTrigger : MonoBehaviour
 {
-    public string playerTag = "Player";
-    public Rigidbody2D[] newspapers;
-    public float gravityScale = 1f;
-    public KeyCode activateKey = KeyCode.E;
+    [Tooltip("Arraste aqui os Collider2D dos triggers (Start, Creditos, Sair)")]
+    public Collider2D[] triggersToEnable;
 
-    private bool playerInside = false;
-    private bool activated = false;
+    [Tooltip("Se true, também ativa GameObjects inteiros ao invés de apenas colliders")]
+    public GameObject[] objectsToEnable;
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnMirrorButtonPressed()
     {
-        if (other.CompareTag(playerTag))
-            playerInside = true;
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag(playerTag))
-            playerInside = false;
-    }
-
-    void Update()
-    {
-        if (playerInside && !activated && Input.GetKeyDown(activateKey))
+        if (triggersToEnable != null)
         {
-            foreach (Rigidbody2D rb in newspapers)
+            foreach (var col in triggersToEnable)
             {
-                if (rb == null) continue;
-                rb.bodyType = RigidbodyType2D.Dynamic;
-                rb.gravityScale = gravityScale;
-                rb.simulated = true;
+                if (col != null) col.enabled = true;
             }
-
-            activated = true;
         }
+        if (objectsToEnable != null)
+        {
+            foreach (var go in objectsToEnable)
+            {
+                if (go != null) go.SetActive(true);
+            }
+        }
+
+        Debug.Log("Espelho: triggers ativados.");
     }
 }
