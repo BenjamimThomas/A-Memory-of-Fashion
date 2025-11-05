@@ -10,6 +10,9 @@ public class Inventory : MonoBehaviour
 
     private List<string> items = new List<string>();
     private bool inventoryOpen = false;
+    private Vector3 closedScale = Vector3.zero;
+    private Vector3 openScale = Vector3.one;
+    private float animSpeed = 8f; 
 
     void Awake()
     {
@@ -19,14 +22,27 @@ public class Inventory : MonoBehaviour
             Destroy(gameObject);
     }
 
+    void Start()
+    {
+        inventoryUI.transform.localScale = closedScale;
+        inventoryUI.SetActive(true);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             inventoryOpen = !inventoryOpen;
-            inventoryUI.SetActive(inventoryOpen);
             UpdateInventoryText();
         }
+
+        // animação suave abrindo/fechando
+        Vector3 targetScale = inventoryOpen ? openScale : closedScale;
+        inventoryUI.transform.localScale = Vector3.Lerp(
+            inventoryUI.transform.localScale,
+            targetScale,
+            Time.deltaTime * animSpeed
+        );
     }
 
     public void AddItem(string item)
