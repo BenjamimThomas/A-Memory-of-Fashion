@@ -2,27 +2,15 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    public string itemName;
-    [SerializeField] private Sprite emptyBoxSprite;
-
+    public Sprite itemSprite; 
     private bool playerNear = false;
-    private SpriteRenderer spriteRenderer;
 
-    void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    void Update()
+    private void Update()
     {
         if (playerNear && Input.GetKeyDown(KeyCode.E))
         {
-            Inventory.instance.AddItem(itemName);
-
-            if (emptyBoxSprite != null)
-                spriteRenderer.sprite = emptyBoxSprite;
-
-            Destroy(this); 
+            Inventory.instance.AddItem(itemSprite);
+            Destroy(gameObject);
         }
     }
 
