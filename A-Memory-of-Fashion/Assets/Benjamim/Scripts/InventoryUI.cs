@@ -3,36 +3,49 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     public GameObject inventoryPanel;
-    public Animator animator;
     private bool isOpen = false;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = inventoryPanel.GetComponent<Animator>();
+        inventoryPanel.SetActive(false);
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            ToggleInventory();
+            if (isOpen)
+                CloseInventory();
+            else
+                OpenInventory();
         }
     }
 
-    void ToggleInventory()
+    void OpenInventory()
     {
-        isOpen = !isOpen;
+        inventoryPanel.SetActive(true);
+        animator.SetTrigger("Open");
+        isOpen = true;
 
-        if (isOpen)
-        {
-            inventoryPanel.SetActive(true);
-            animator.SetTrigger("Open");
-        }
-        else
-        {
-            animator.SetTrigger("Close");
-            StartCoroutine(CloseAfterAnimation());
-        }
+        PlayerMovements1.canMove = false;
     }
 
-    System.Collections.IEnumerator CloseAfterAnimation()
+    void CloseInventory()
     {
-        yield return new WaitForSeconds(0.3f); // tempo da animação de fechar
-        inventoryPanel.SetActive(false);
+        animator.SetTrigger("Close");
+        isOpen = false;
+
+        PlayerMovements1.canMove = true;
+
+        StartCoroutine(HideAfterDelay());
+    }
+
+    System.Collections.IEnumerator HideAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+        if (!isOpen)
+            inventoryPanel.SetActive(false);
     }
 }
