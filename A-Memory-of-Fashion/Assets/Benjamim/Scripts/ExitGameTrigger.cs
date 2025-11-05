@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class ExitGameTrigger : MonoBehaviour
+public class ExitGame : MonoBehaviour
 {
-    public string playerTag = "Player";
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag(playerTag))
+        if (collision.CompareTag("Player"))
+        {
             Application.Quit();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        }
     }
 }
