@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManagerMenu : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManagerMenu instance;
     public bool interactionsEnabled = false;
 
     void Awake()
