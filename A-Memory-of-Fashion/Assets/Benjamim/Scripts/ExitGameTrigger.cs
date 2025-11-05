@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ExitGame : MonoBehaviour
+public class ExitGameTrigger : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {

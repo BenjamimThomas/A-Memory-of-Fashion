@@ -3845,7 +3845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8047335205fc384f9dc10f908d25c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartSceneTrigger
-  sceneToLoad: 
+  sceneToLoad: Casa 1
 --- !u!61 &1610601060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5124,6 +5124,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2117303309}
+        m_TargetAssemblyTypeName: MirrorButtonEnable, Assembly-CSharp
+        m_MethodName: OnMirrorButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2117303304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5207,14 +5219,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2117303301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd7e814e2d7f2a4c841e975eb3831e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fefd03664f1e9c46b2e759b949f3885, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnterButtonTrigger
-  triggersToEnable:
-  - {fileID: 360759453}
-  - {fileID: 305958152}
-  - {fileID: 1610601060}
-  objectsToEnable: []
+  m_EditorClassIdentifier: Assembly-CSharp::MirrorButtonEnable
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
