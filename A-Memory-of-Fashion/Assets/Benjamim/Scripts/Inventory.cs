@@ -1,18 +1,18 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
-    public GameObject inventoryUI;
-    public TMP_Text itemListText;
 
-    private List<string> items = new List<string>();
-    private bool inventoryOpen = false;
-    private Vector3 closedScale = Vector3.zero;
-    private Vector3 openScale = Vector3.one;
-    private float animSpeed = 8f; 
+    [Header("Configurações de Slots")]
+    public Transform slotsParent; 
+    public GameObject slotPrefab;
+    public int slotCount = 6;
+
+    private List<Image> slots = new List<Image>();
+    private List<Sprite> items = new List<Sprite>();
 
     void Awake()
     {
@@ -24,39 +24,29 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        inventoryUI.transform.localScale = closedScale;
-        inventoryUI.SetActive(true);
+        for (int i = 0; i < slotCount; i++)
+        {
+            GameObject newSlot = Instantiate(slotPrefab, slotsParent);
+            Image img = newSlot.GetComponent<Image>();
+            img.sprite = null;
+            img.enabled = false;
+            slots.Add(img);
+        }
     }
 
-    void Update()
+    public void AddItem(Sprite itemSprite)
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        for (int i = 0; i < slots.Count; i++)
         {
-            inventoryOpen = !inventoryOpen;
-            UpdateInventoryText();
+            if (!slots[i].enabled)
+            {
+                slots[i].sprite = itemSprite;
+                slots[i].enabled = true;
+                items.Add(itemSprite);
+                return;
+            }
         }
 
-        // animação suave abrindo/fechando
-        Vector3 targetScale = inventoryOpen ? openScale : closedScale;
-        inventoryUI.transform.localScale = Vector3.Lerp(
-            inventoryUI.transform.localScale,
-            targetScale,
-            Time.deltaTime * animSpeed
-        );
-    }
-
-    public void AddItem(string item)
-    {
-        items.Add(item);
-        Debug.Log("Item adicionado: " + item);
-    }
-
-    void UpdateInventoryText()
-    {
-        if (itemListText == null) return;
-
-        itemListText.text = "Inventário:\n";
-        foreach (string item in items)
-            itemListText.text += "- " + item + "\n";
+        Debug.Log("Inventário cheio!");
     }
 }
