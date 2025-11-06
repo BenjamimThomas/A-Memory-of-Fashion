@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections; 
 public class InventoryUI : MonoBehaviour
 {
     public GameObject inventoryPanel;
@@ -26,26 +26,24 @@ public class InventoryUI : MonoBehaviour
     void OpenInventory()
     {
         inventoryPanel.SetActive(true);
-        animator.SetTrigger("Open");
+        animator.SetBool("IsOpen", true); 
         isOpen = true;
-
-        PlayerMovements1.canMove = false;
     }
-
     void CloseInventory()
     {
-        animator.SetTrigger("Close");
-        isOpen = false;
+        animator.SetBool("IsOpen", false);
 
-        PlayerMovements1.canMove = true;
-
+        StopAllCoroutines();
         StartCoroutine(HideAfterDelay());
-    }
 
-    System.Collections.IEnumerator HideAfterDelay()
+        isOpen = false;
+    }
+    IEnumerator HideAfterDelay()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         if (!isOpen)
+        {
             inventoryPanel.SetActive(false);
+        }
     }
 }
