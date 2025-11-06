@@ -29,7 +29,11 @@ public class Inventory : MonoBehaviour
                 vestidoAzulSlot.SetActive(true);
                 break;
 
-            case "Sapato":
+            case "SapatoAzul":
+                sapatoSlot.SetActive(true);
+                break;
+
+            case "SapatoVermelho":
                 sapatoSlot.SetActive(true);
                 break;
 
