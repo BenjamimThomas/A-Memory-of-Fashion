@@ -7,14 +7,19 @@ public class Inventory : MonoBehaviour
     [Header("Itens do Inventário")]
     public GameObject vestidoVermelhoSlot;
     public GameObject vestidoAzulSlot;
-    public GameObject sapatoSlot;
+    public GameObject sapatoAzulSlot;
+    public GameObject sapatoVermelhoSlot;
 
     void Awake()
     {
         if (instance == null)
+        {
             instance = this;
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
     public void AddItem(string itemName)
@@ -24,17 +29,15 @@ public class Inventory : MonoBehaviour
             case "VestidoVermelho":
                 vestidoVermelhoSlot.SetActive(true);
                 break;
-
             case "VestidoAzul":
                 vestidoAzulSlot.SetActive(true);
                 break;
 
             case "SapatoAzul":
-                sapatoSlot.SetActive(true);
+                sapatoAzulSlot.SetActive(true);
                 break;
-
             case "SapatoVermelho":
-                sapatoSlot.SetActive(true);
+                sapatoVermelhoSlot.SetActive(true);
                 break;
 
             default:
