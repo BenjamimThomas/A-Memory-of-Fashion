@@ -443,8 +443,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Baleia-azul luta para sobreviver entre centenas de barcos na Patag\xF4nia"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 616c9046a3258af449f00484545975af, type: 2}
+  m_sharedMaterial: {fileID: -3302008014070343762, guid: 616c9046a3258af449f00484545975af,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1278,8 +1279,9 @@ MonoBehaviour:
   m_text: "Hist\xF3ria de fam\xEDlia e aceita\xE7\xE3o: \u201CVoc\xEA \xE9 igual
     \xE0 sua tia Valentina\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 616c9046a3258af449f00484545975af, type: 2}
+  m_sharedMaterial: {fileID: -3302008014070343762, guid: 616c9046a3258af449f00484545975af,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
