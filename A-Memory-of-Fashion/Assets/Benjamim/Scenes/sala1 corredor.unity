@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 156312253}
   - component: {fileID: 156312252}
   - component: {fileID: 156312251}
+  - component: {fileID: 156312254}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -200,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 156312252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 156312254}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Quarto dos pais
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156312252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +253,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156312249}
   m_CullTransparentMesh: 1
+--- !u!114 &156312254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156312249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c21a41e80aac34d81daec3fdd1fd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
 --- !u!1 &158318015
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +277,7 @@ GameObject:
   - component: {fileID: 158318019}
   - component: {fileID: 158318018}
   - component: {fileID: 158318017}
+  - component: {fileID: 158318020}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -361,6 +387,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158318015}
   m_CullTransparentMesh: 1
+--- !u!114 &158318020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158318015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c21a41e80aac34d81daec3fdd1fd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
 --- !u!1 &266279597
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +760,7 @@ GameObject:
   - component: {fileID: 1574074940}
   - component: {fileID: 1574074939}
   - component: {fileID: 1574074938}
+  - component: {fileID: 1574074941}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -791,7 +830,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1574074939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1574074941}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Banheiro
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1574074939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +882,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574074936}
   m_CullTransparentMesh: 1
+--- !u!114 &1574074941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574074936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c21a41e80aac34d81daec3fdd1fd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
 --- !u!1 &1689771763
 GameObject:
   m_ObjectHideFlags: 0
