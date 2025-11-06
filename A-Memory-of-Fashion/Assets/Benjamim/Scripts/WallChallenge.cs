@@ -5,8 +5,8 @@ public class WallChallenge : MonoBehaviour
     [Header("Wall Settings")]
     [SerializeField] private float wallSpeed = 2f;
     [SerializeField] private float knockbackForce = 8f;
-    [SerializeField] private float resetXPosition = -10f; // posição para resetar
-    [SerializeField] private float startXPosition = 10f;  // posição inicial da parede
+    [SerializeField] private float resetXPosition = -10f;
+    [SerializeField] private float startXPosition = 10f;
 
     private string correctLetter = "w";
     private bool challengeSuccess = false;
@@ -38,11 +38,8 @@ public class WallChallenge : MonoBehaviour
 
         transform.Translate(Vector2.left * wallSpeed * Time.deltaTime);
 
-        // Reseta a parede se passar do limite
         if (transform.position.x <= resetXPosition)
-        {
             ResetWall();
-        }
     }
 
     public void StartMovement()
@@ -59,9 +56,7 @@ public class WallChallenge : MonoBehaviour
     public void ActivateChallengeUI()
     {
         if (challengeStarted && !challengeSuccess && gameController != null)
-        {
             gameController.ShowChallengeUI(this, correctLetter);
-        }
     }
 
     public void ChallengeSuccess()
@@ -79,7 +74,6 @@ public class WallChallenge : MonoBehaviour
         }
     }
 
-    // Reseta a parede para a posição inicial
     private void ResetWall()
     {
         transform.position = new Vector3(startXPosition, transform.position.y, transform.position.z);
