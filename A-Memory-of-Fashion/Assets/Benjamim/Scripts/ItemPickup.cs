@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    public Sprite itemSprite; 
+    public string itemName; 
     private bool playerNear = false;
 
     private void Update()
     {
         if (playerNear && Input.GetKeyDown(KeyCode.E))
         {
-            Inventory.instance.AddItem(itemSprite);
+            Inventory.instance.AddItem(itemName);
             Destroy(gameObject);
         }
     }

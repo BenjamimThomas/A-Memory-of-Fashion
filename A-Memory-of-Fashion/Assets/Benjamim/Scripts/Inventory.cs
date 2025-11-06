@@ -1,18 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
 
-    [Header("Configurações de Slots")]
-    public Transform slotsParent; 
-    public GameObject slotPrefab;
-    public int slotCount = 6;
-
-    private List<Image> slots = new List<Image>();
-    private List<Sprite> items = new List<Sprite>();
+    [Header("Itens do Inventário")]
+    public GameObject vestidoVermelhoSlot;
+    public GameObject vestidoAzulSlot;
+    public GameObject sapatoSlot;
 
     void Awake()
     {
@@ -22,31 +17,25 @@ public class Inventory : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
+    public void AddItem(string itemName)
     {
-        for (int i = 0; i < slotCount; i++)
+        switch (itemName)
         {
-            GameObject newSlot = Instantiate(slotPrefab, slotsParent);
-            Image img = newSlot.GetComponent<Image>();
-            img.sprite = null;
-            img.enabled = false;
-            slots.Add(img);
-        }
-    }
+            case "VestidoVermelho":
+                vestidoVermelhoSlot.SetActive(true);
+                break;
 
-    public void AddItem(Sprite itemSprite)
-    {
-        for (int i = 0; i < slots.Count; i++)
-        {
-            if (!slots[i].enabled)
-            {
-                slots[i].sprite = itemSprite;
-                slots[i].enabled = true;
-                items.Add(itemSprite);
-                return;
-            }
-        }
+            case "VestidoAzul":
+                vestidoAzulSlot.SetActive(true);
+                break;
 
-        Debug.Log("Inventário cheio!");
+            case "Sapato":
+                sapatoSlot.SetActive(true);
+                break;
+
+            default:
+                Debug.LogWarning("Item não reconhecido: " + itemName);
+                break;
+        }
     }
 }
