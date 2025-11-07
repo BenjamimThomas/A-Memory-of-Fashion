@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cozinha.unity
     guid: d26566fd37ac0224a99817e7d3c39a3d
   - enabled: 1
-    path: Assets/Scenes/Quarto dos pais.unity
+    path: Assets/Scenes/Quarto da luna.unity
     guid: 94d7ab4c5ba6c134f8f5efebd32338f8
   - enabled: 1
     path: Assets/Benjamim/Scenes/Bastidores.unity
