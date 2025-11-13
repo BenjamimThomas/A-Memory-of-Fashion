@@ -47,37 +47,40 @@ namespace Cainos.PixelArtTopDown_Basic
             GetComponent<Rigidbody2D>().linearVelocity = speed * dir;
 
             // -------------------------------------
-            // 🔹 Teste: mudar Sorting Layer com teclas numéricas
+            // 🔹 Teste: mudar a Ordem de Renderização (Sorting Order) com teclas numéricas
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                spriteRenderer.sortingLayerName = "Layer 1";
-                Debug.Log("Sorting Layer -> Layer 1");
+                spriteRenderer.sortingOrder = 0;
+                Debug.Log("Sorting Order -> 0");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                spriteRenderer.sortingLayerName = "Layer 2";
-                Debug.Log("Sorting Layer -> Layer 2");
+                spriteRenderer.sortingOrder = 1; // Usando números sequenciais para teste
+                Debug.Log("Sorting Order -> 1");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                spriteRenderer.sortingLayerName = "Layer 3";
-                Debug.Log("Sorting Layer -> Layer 3");
+                spriteRenderer.sortingOrder = 2;
+                Debug.Log("Sorting Order -> 2");
             }
         }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("HighArea"))
             {
-                spriteRenderer.sortingLayerName = "Layer 2";
+                // Mude a ordem de renderização para um valor menor (renderiza "atrás" de objetos com 0 ou mais)
+                spriteRenderer.sortingOrder = -1;
             }
         }
+
         private void OnTriggerExit2D(Collider2D other)
         {
             if (other.CompareTag("HighArea"))
             {
-                spriteRenderer.sortingLayerName = "Layer 1";
+                // Retorne à ordem de renderização padrão
+                spriteRenderer.sortingOrder = 0;
             }
         }
-
     }
 }
