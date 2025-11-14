@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Cainos.PixelArtTopDown_Basic
 {
-
     public class PropsAltar : MonoBehaviour
     {
         public List<SpriteRenderer> runes;
@@ -21,11 +19,13 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (!other.CompareTag("Caixa")) return;
             targetColor.a = 1.0f;
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            if (!other.CompareTag("Caixa")) return;
             targetColor.a = 0.0f;
         }
 
