@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Benjamim/Scenes/sala.unity
     guid: 011a4b53c4b6cec419f89a94a3d10585
   - enabled: 1
-    path: Assets/Benjamim/Scenes/Customizar.unity
-    guid: 790703c39ec297541826610714e7c134
-  - enabled: 1
     path: Assets/Benjamim/Scenes/sala1 corredor.unity
     guid: f76d11c89bbcc5d45b414a7db06aca69
   - enabled: 1
