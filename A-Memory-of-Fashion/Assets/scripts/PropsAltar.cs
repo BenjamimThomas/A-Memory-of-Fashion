@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
@@ -8,6 +9,8 @@ namespace Cainos.PixelArtTopDown_Basic
     {
         public List<SpriteRenderer> runes;
         public float lerpSpeed;
+        public GameObject teleportButton;
+        public string sceneToLoad;
 
         private Color curColor;
         private Color targetColor;
@@ -15,6 +18,7 @@ namespace Cainos.PixelArtTopDown_Basic
         private void Awake()
         {
             targetColor = runes[0].color;
+            teleportButton.SetActive(false);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -37,6 +41,16 @@ namespace Cainos.PixelArtTopDown_Basic
             {
                 r.color = curColor;
             }
+
+            if (curColor.a > 0.95f)
+                teleportButton.SetActive(true);
+            else
+                teleportButton.SetActive(false);
+        }
+
+        public void Teleport()
+        {
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }
