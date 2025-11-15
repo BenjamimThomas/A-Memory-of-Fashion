@@ -3,6 +3,14 @@ using UnityEngine;
 public class CharacterOutfit : MonoBehaviour
 {
     public static CharacterOutfit instance;
+    public bool vestidoEscolhido = false;
+    public bool sapatoEscolhido = false;
+
+public bool PodeAvancar()
+{
+    return vestidoEscolhido && sapatoEscolhido;
+}
+
 
     [Header("Renderers do Personagem")]
     public SpriteRenderer vestidoRenderer;
