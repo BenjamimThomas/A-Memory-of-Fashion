@@ -4,17 +4,18 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
 
-    [Header("Itens do Inventário")]
-    public GameObject vestidoVermelhoSlot;
-    public GameObject vestidoAzulSlot;
-    public GameObject sapatoAzulSlot;
-    public GameObject sapatoVermelhoSlot;
+    [Header("Flags dos Itens")]
+    public bool temVestidoVermelho;
+    public bool temVestidoAzul;
+    public bool temSapatoVermelho;
+    public bool temSapatoAzul;
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -27,17 +28,19 @@ public class Inventory : MonoBehaviour
         switch (itemName)
         {
             case "VestidoVermelho":
-                vestidoVermelhoSlot.SetActive(true);
+                temVestidoVermelho = true;
                 break;
+
             case "VestidoAzul":
-                vestidoAzulSlot.SetActive(true);
+                temVestidoAzul = true;
                 break;
 
             case "SapatoAzul":
-                sapatoAzulSlot.SetActive(true);
+                temSapatoAzul = true;
                 break;
+
             case "SapatoVermelho":
-                sapatoVermelhoSlot.SetActive(true);
+                temSapatoVermelho = true;
                 break;
 
             default:
