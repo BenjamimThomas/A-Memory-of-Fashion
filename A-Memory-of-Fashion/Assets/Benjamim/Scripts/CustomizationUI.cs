@@ -7,11 +7,14 @@ public class CustomizationUI : MonoBehaviour
     public GameObject btnSapatoVermelho;
     public GameObject btnSapatoAzul;
 
-    void Start()
-    {
-        btnVestidoVermelho.SetActive(Inventory.instance.vestidoVermelhoSlot.activeSelf);
-        btnVestidoAzul.SetActive(Inventory.instance.vestidoAzulSlot.activeSelf);
-        btnSapatoVermelho.SetActive(Inventory.instance.sapatoVermelhoSlot.activeSelf);
-        btnSapatoAzul.SetActive(Inventory.instance.sapatoAzulSlot.activeSelf);
-    }
+  void Start()
+{
+    var inv = Inventory.instance;
+
+    btnVestidoVermelho.SetActive(inv.temVestidoVermelho);
+    btnVestidoAzul.SetActive(inv.temVestidoAzul);
+    btnSapatoVermelho.SetActive(inv.temSapatoVermelho);
+    btnSapatoAzul.SetActive(inv.temSapatoAzul);
+}
+
 }
