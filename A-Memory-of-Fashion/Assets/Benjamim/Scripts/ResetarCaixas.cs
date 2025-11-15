@@ -1,28 +1,38 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ResetarCaixas : MonoBehaviour
 {
-    public string sceneParaRecarregar;
+    public GameObject slotVestidoVermelho;
+    public GameObject slotVestidoAzul;
+    public GameObject slotSapatoVermelho;
+    public GameObject slotSapatoAzul;
 
-    public void Resetar()
+    public GameObject caixaVestidoVermelho;
+    public GameObject caixaVestidoAzul;
+    public GameObject caixaSapatoVermelho;
+    public GameObject caixaSapatoAzul;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
+        if (!other.CompareTag("Player")) return;
+        Resetar();
+    }
 
-        Inventory.instance.vestidoVermelhoSlot.SetActive(false);
-        Inventory.instance.vestidoAzulSlot.SetActive(false);
-        Inventory.instance.sapatoAzulSlot.SetActive(false);
-        Inventory.instance.sapatoVermelhoSlot.SetActive(false);
+    void Resetar()
+    {
+        Inventory.instance.temVestidoVermelho = false;
+        Inventory.instance.temVestidoAzul = false;
+        Inventory.instance.temSapatoVermelho = false;
+        Inventory.instance.temSapatoAzul = false;
 
-        if (CharacterOutfit.instance != null)
-        {
-            CharacterOutfit.instance.vestidoRenderer.sprite = null;
-            CharacterOutfit.instance.sapatoRenderer.sprite = null;
-            CharacterOutfit.instance.vestidoEscolhido = false;
-            CharacterOutfit.instance.sapatoEscolhido = false;
-        }
+        slotVestidoVermelho.SetActive(false);
+        slotVestidoAzul.SetActive(false);
+        slotSapatoVermelho.SetActive(false);
+        slotSapatoAzul.SetActive(false);
 
-        SceneManager.LoadScene(sceneParaRecarregar);
+        caixaVestidoVermelho.SetActive(true);
+        caixaVestidoAzul.SetActive(true);
+        caixaSapatoVermelho.SetActive(true);
+        caixaSapatoAzul.SetActive(true);
     }
 }
