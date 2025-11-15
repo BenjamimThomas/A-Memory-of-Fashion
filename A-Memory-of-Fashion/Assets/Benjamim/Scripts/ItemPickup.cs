@@ -4,7 +4,13 @@ public class ItemPickup : MonoBehaviour
 {
     public string itemName; 
     private bool playerNear = false;
-
+    void Start()
+{
+    if (PlayerPrefs.GetInt(itemName, 0) == 1)
+    {
+        Destroy(gameObject);
+    }
+}
     private void Update()
     {
         if (playerNear && Input.GetKeyDown(KeyCode.E))
@@ -29,7 +35,6 @@ public class ItemPickup : MonoBehaviour
 {
     Inventory.instance.AddItem(itemName);
 
-    // Salvar que o item já foi coletado
     PlayerPrefs.SetInt(itemName, 1);
     PlayerPrefs.Save();
 
