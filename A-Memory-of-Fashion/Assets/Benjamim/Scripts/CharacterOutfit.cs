@@ -1,25 +1,27 @@
 using UnityEngine;
 
-public class CharacterOutfit : MonoBehaviour
+public class OutfitSets : MonoBehaviour
 {
-    public static CharacterOutfit instance;
+    public static OutfitSets instance;
 
-    [Header("Sprites do Personagem")]
+    [Header("Renderers do Personagem")]
     public SpriteRenderer vestidoRenderer;
     public SpriteRenderer sapatoRenderer;
 
-    [Header("Sprites das Roupas")]
-    public Sprite vestidoVermelho;
+    [Header("Vestidos")]
     public Sprite vestidoAzul;
-    public Sprite sapatoVermelho;
+    public Sprite vestidoVermelho;
+
+    [Header("Sapatos")]
     public Sprite sapatoAzul;
+    public Sprite sapatoVermelho;
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -27,28 +29,28 @@ public class CharacterOutfit : MonoBehaviour
         }
     }
 
-    public void Equipar(string itemName)
+    public void EquiparConjunto(int id)
     {
-        switch (itemName)
+        switch (id)
         {
-            case "VestidoVermelho":
-                vestidoRenderer.sprite = vestidoVermelho;
-                break;
-
-            case "VestidoAzul":
+            case 1: 
                 vestidoRenderer.sprite = vestidoAzul;
-                break;
-
-            case "SapatoVermelho":
                 sapatoRenderer.sprite = sapatoVermelho;
                 break;
 
-            case "SapatoAzul":
+            case 2: 
+                vestidoRenderer.sprite = vestidoAzul;
                 sapatoRenderer.sprite = sapatoAzul;
                 break;
 
-            default:
-                Debug.LogWarning("Item não existe: " + itemName);
+            case 3: 
+                vestidoRenderer.sprite = vestidoVermelho;
+                sapatoRenderer.sprite = sapatoVermelho;
+                break;
+
+            case 4: 
+                vestidoRenderer.sprite = vestidoVermelho;
+                sapatoRenderer.sprite = sapatoAzul;
                 break;
         }
     }
