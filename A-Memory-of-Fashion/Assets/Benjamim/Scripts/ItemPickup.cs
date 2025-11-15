@@ -25,4 +25,15 @@ public class ItemPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
             playerNear = false;
     }
+    if (playerNear && Input.GetKeyDown(KeyCode.E))
+{
+    Inventory.instance.AddItem(itemName);
+
+    // Salvar que o item já foi coletado
+    PlayerPrefs.SetInt(itemName, 1);
+    PlayerPrefs.Save();
+
+    Destroy(gameObject);
+}
+
 }
