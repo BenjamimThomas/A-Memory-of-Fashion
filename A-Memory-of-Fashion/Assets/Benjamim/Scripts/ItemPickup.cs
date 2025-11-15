@@ -8,9 +8,7 @@ public class ItemPickup : MonoBehaviour
     void Start()
     {
         if (PlayerPrefs.GetInt(itemName, 0) == 1)
-        {
-            Destroy(gameObject);
-        }
+            gameObject.SetActive(false);
     }
 
     void Update()
@@ -20,7 +18,7 @@ public class ItemPickup : MonoBehaviour
             Inventory.instance.AddItem(itemName);
             PlayerPrefs.SetInt(itemName, 1);
             PlayerPrefs.Save();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

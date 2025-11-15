@@ -9,6 +9,15 @@ public class Inventory : MonoBehaviour
     public bool temVestidoAzul;
     public bool temSapatoVermelho;
     public bool temSapatoAzul;
+    
+    void Start()
+{
+    temVestidoVermelho = PlayerPrefs.GetInt("VestidoVermelho", 0) == 1;
+    temVestidoAzul = PlayerPrefs.GetInt("VestidoAzul", 0) == 1;
+    temSapatoVermelho = PlayerPrefs.GetInt("SapatoVermelho", 0) == 1;
+    temSapatoAzul = PlayerPrefs.GetInt("SapatoAzul", 0) == 1;
+}
+
 
     void Awake()
     {

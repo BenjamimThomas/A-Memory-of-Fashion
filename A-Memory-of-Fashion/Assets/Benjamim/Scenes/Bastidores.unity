@@ -16782,8 +16782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -6.99}
-  m_SizeDelta: {x: 65.29, y: 21.17}
+  m_AnchoredPosition: {x: -1.41, y: -6.99}
+  m_SizeDelta: {x: 47.02, y: 21.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557112008
 MonoBehaviour:
@@ -24387,7 +24387,7 @@ GameObject:
   - component: {fileID: 1067207349}
   - component: {fileID: 1067207348}
   - component: {fileID: 1067207347}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24429,6 +24429,8 @@ MonoBehaviour:
   caixaVestidoAzul: {fileID: 681104157}
   caixaSapatoVermelho: {fileID: 675439149}
   caixaSapatoAzul: {fileID: 909779900}
+  somReset: {fileID: 8300000, guid: a62f2be5f31fc4e5bb72af4cc1c43054, type: 3}
+  volume: 1
 --- !u!61 &1067207348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35418,7 +35420,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -113.25, y: -6.99}
-  m_SizeDelta: {x: 65.29, y: 21.17}
+  m_SizeDelta: {x: 45.71, y: 21.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1512318166
 MonoBehaviour:
@@ -45319,12 +45321,12 @@ PrefabInstance:
     - target: {fileID: 3177150410916164401, guid: 6dffed31896a41041acac6477d8ee28a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.86
+      value: 5.58
       objectReference: {fileID: 0}
     - target: {fileID: 3177150410916164401, guid: 6dffed31896a41041acac6477d8ee28a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.77
+      value: 3.33
       objectReference: {fileID: 0}
     - target: {fileID: 3177150410916164401, guid: 6dffed31896a41041acac6477d8ee28a,
         type: 3}

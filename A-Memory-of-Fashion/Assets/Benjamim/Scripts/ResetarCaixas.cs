@@ -12,6 +12,9 @@ public class ResetarCaixas : MonoBehaviour
     public GameObject caixaSapatoVermelho;
     public GameObject caixaSapatoAzul;
 
+    public AudioClip somReset;
+    public float volume = 1f;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
@@ -20,6 +23,8 @@ public class ResetarCaixas : MonoBehaviour
 
     void Resetar()
     {
+        AudioSource.PlayClipAtPoint(somReset, transform.position, volume);
+
         Inventory.instance.temVestidoVermelho = false;
         Inventory.instance.temVestidoAzul = false;
         Inventory.instance.temSapatoVermelho = false;
