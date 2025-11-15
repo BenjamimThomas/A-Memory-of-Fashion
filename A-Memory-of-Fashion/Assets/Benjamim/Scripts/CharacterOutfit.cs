@@ -3,14 +3,9 @@ using UnityEngine;
 public class CharacterOutfit : MonoBehaviour
 {
     public static CharacterOutfit instance;
+
     public bool vestidoEscolhido = false;
     public bool sapatoEscolhido = false;
-
-public bool PodeAvancar()
-{
-    return vestidoEscolhido && sapatoEscolhido;
-}
-
 
     [Header("Renderers do Personagem")]
     public SpriteRenderer vestidoRenderer;
@@ -29,38 +24,41 @@ public bool PodeAvancar()
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
     }
+    public bool PodeAvancar()
+    {
+        return vestidoEscolhido && sapatoEscolhido;
+    }
 
     public void Equipar(string itemName)
-{
-    switch (itemName)
     {
-        // Vestidos
-        case "VestidoVermelho":
-            vestidoRenderer.sprite = vestidoVermelho;
-            vestidoEscolhido = true;
-            break;
+        switch (itemName)
+        {
+            case "VestidoVermelho":
+                vestidoRenderer.sprite = vestidoVermelho;
+                vestidoEscolhido = true;
+                break;
 
-        case "VestidoAzul":
-            vestidoRenderer.sprite = vestidoAzul;
-            vestidoEscolhido = true;
-            break;
+            case "VestidoAzul":
+                vestidoRenderer.sprite = vestidoAzul;
+                vestidoEscolhido = true;
+                break;
 
-        // Sapatos
-        case "SapatoVermelho":
-            sapatoRenderer.sprite = sapatoVermelho;
-            sapatoEscolhido = true;
-            break;
+            case "SapatoVermelho":
+                sapatoRenderer.sprite = sapatoVermelho;
+                sapatoEscolhido = true;
+                break;
 
-        case "SapatoAzul":
-            sapatoRenderer.sprite = sapatoAzul;
-            sapatoEscolhido = true;
-            break;
+            case "SapatoAzul":
+                sapatoRenderer.sprite = sapatoAzul;
+                sapatoEscolhido = true;
+                break;
+        }
     }
 }
