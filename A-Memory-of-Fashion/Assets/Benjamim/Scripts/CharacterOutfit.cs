@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class OutfitSets : MonoBehaviour
+public class CharacterOutfit : MonoBehaviour
 {
-    public static OutfitSets instance;
+    public static CharacterOutfit instance;
 
     [Header("Renderers do Personagem")]
     public SpriteRenderer vestidoRenderer;
     public SpriteRenderer sapatoRenderer;
 
-    [Header("Vestidos")]
-    public Sprite vestidoAzul;
+    [Header("Sprites dos Vestidos")]
     public Sprite vestidoVermelho;
+    public Sprite vestidoAzul;
 
-    [Header("Sapatos")]
-    public Sprite sapatoAzul;
+    [Header("Sprites dos Sapatos")]
     public Sprite sapatoVermelho;
+    public Sprite sapatoAzul;
 
     void Awake()
     {
@@ -29,28 +29,30 @@ public class OutfitSets : MonoBehaviour
         }
     }
 
-    public void EquiparConjunto(int id)
+    public void Equipar(string itemName)
     {
-        switch (id)
+        switch (itemName)
         {
-            case 1: 
+            // Vestidos
+            case "VestidoVermelho":
+                vestidoRenderer.sprite = vestidoVermelho;
+                break;
+
+            case "VestidoAzul":
                 vestidoRenderer.sprite = vestidoAzul;
+                break;
+
+            // Sapatos
+            case "SapatoVermelho":
                 sapatoRenderer.sprite = sapatoVermelho;
                 break;
 
-            case 2: 
-                vestidoRenderer.sprite = vestidoAzul;
+            case "SapatoAzul":
                 sapatoRenderer.sprite = sapatoAzul;
                 break;
 
-            case 3: 
-                vestidoRenderer.sprite = vestidoVermelho;
-                sapatoRenderer.sprite = sapatoVermelho;
-                break;
-
-            case 4: 
-                vestidoRenderer.sprite = vestidoVermelho;
-                sapatoRenderer.sprite = sapatoAzul;
+            default:
+                Debug.LogWarning("Item não existe: " + itemName);
                 break;
         }
     }
