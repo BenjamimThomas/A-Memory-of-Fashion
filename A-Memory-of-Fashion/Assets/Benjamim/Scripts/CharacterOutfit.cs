@@ -30,30 +30,29 @@ public class CharacterOutfit : MonoBehaviour
     }
 
     public void Equipar(string itemName)
+{
+    switch (itemName)
     {
-        switch (itemName)
-        {
-            // Vestidos
-            case "VestidoVermelho":
-                vestidoRenderer.sprite = vestidoVermelho;
-                break;
+        // Vestidos
+        case "VestidoVermelho":
+            vestidoRenderer.sprite = vestidoVermelho;
+            vestidoEscolhido = true;
+            break;
 
-            case "VestidoAzul":
-                vestidoRenderer.sprite = vestidoAzul;
-                break;
+        case "VestidoAzul":
+            vestidoRenderer.sprite = vestidoAzul;
+            vestidoEscolhido = true;
+            break;
 
-            // Sapatos
-            case "SapatoVermelho":
-                sapatoRenderer.sprite = sapatoVermelho;
-                break;
+        // Sapatos
+        case "SapatoVermelho":
+            sapatoRenderer.sprite = sapatoVermelho;
+            sapatoEscolhido = true;
+            break;
 
-            case "SapatoAzul":
-                sapatoRenderer.sprite = sapatoAzul;
-                break;
-
-            default:
-                Debug.LogWarning("Item não existe: " + itemName);
-                break;
-        }
+        case "SapatoAzul":
+            sapatoRenderer.sprite = sapatoAzul;
+            sapatoEscolhido = true;
+            break;
     }
 }
