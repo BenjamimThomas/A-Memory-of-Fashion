@@ -7,7 +7,15 @@ public class OutfitBinder : MonoBehaviour
 
     void Start()
     {
-        CharacterOutfit.instance.vestidoRenderer = vestidoRendererDaCena;
-        CharacterOutfit.instance.sapatoRenderer  = sapatoRendererDaCena;
+        ApplySavedOutfit();
+    }
+    
+    public void ApplySavedOutfit()
+    {
+        if (CharacterOutfit.instance != null)
+        {
+            vestidoRendererDaCena.sprite = CharacterOutfit.instance.currentVestidoSprite;
+            sapatoRendererDaCena.sprite = CharacterOutfit.instance.currentSapatoSprite;
+        }
     }
 }

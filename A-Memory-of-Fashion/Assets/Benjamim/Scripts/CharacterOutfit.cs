@@ -7,9 +7,8 @@ public class CharacterOutfit : MonoBehaviour
     public bool vestidoEscolhido = false;
     public bool sapatoEscolhido = false;
 
-    [Header("Renderers do Personagem")]
-    public SpriteRenderer vestidoRenderer;
-    public SpriteRenderer sapatoRenderer;
+    public Sprite currentVestidoSprite; 
+    public Sprite currentSapatoSprite; 
 
     [Header("Sprites dos Vestidos")]
     public Sprite vestidoVermelho;
@@ -31,6 +30,7 @@ public class CharacterOutfit : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
     public bool PodeAvancar()
     {
         return vestidoEscolhido && sapatoEscolhido;
@@ -41,22 +41,22 @@ public class CharacterOutfit : MonoBehaviour
         switch (itemName)
         {
             case "VestidoVermelho":
-                vestidoRenderer.sprite = vestidoVermelho;
+                currentVestidoSprite = vestidoVermelho;
                 vestidoEscolhido = true;
                 break;
 
             case "VestidoAzul":
-                vestidoRenderer.sprite = vestidoAzul;
+                currentVestidoSprite = vestidoAzul;
                 vestidoEscolhido = true;
                 break;
 
             case "SapatoVermelho":
-                sapatoRenderer.sprite = sapatoVermelho;
+                currentSapatoSprite = sapatoVermelho;
                 sapatoEscolhido = true;
                 break;
 
             case "SapatoAzul":
-                sapatoRenderer.sprite = sapatoAzul;
+                currentSapatoSprite = sapatoAzul;
                 sapatoEscolhido = true;
                 break;
         }
