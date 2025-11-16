@@ -1,17 +1,56 @@
 using UnityEngine;
+using TMPro; 
+using UnityEngine.UI; 
 
-public class WallActivator : MonoBehaviour
+public class ChallengeInputManager : MonoBehaviour
 {
-    public WallChallenge parentWall;
+    public RectTransform targetRect;
+    public TextMeshProUGUI letterText; 
 
-    void Reset()
+    [SerializeField] private float marginPercentage = 0.1f;
+    
+    private WallChallenge activeChallenge;
+    private string requiredLetter;
+    
+    public void SetupChallenge(WallChallenge challenge, string letter)
     {
-        if (parentWall == null) parentWall = GetComponentInParent<WallChallenge>();
+        activeChallenge = challenge;
+        requiredLetter = letter;
+        letterText.text = requiredLetter.ToUpper();
+        gameObject.SetActive(true);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void Update()
     {
-        if (!other.CompareTag("Player")) return;
-        parentWall.ActivateChallengeUI();
+        if (activeChallenge == null) return;
+
+        if (Input.GetKeyDown(requiredLetter))
+        {
+            HandleSuccess();
+        }
+    }
+
+    private void HandleSuccess()
+    {
+        MoveToRandomPosition();
+        activeChallenge.ChallengeSuccess();
+        activeChallenge = null;
+        gameObject.SetActive(false);
+    }
+
+    public void MoveToRandomPosition()
+    {
+        float safeXMin = marginPercentage;
+        float safeXMax = 1f - marginPercentage;
+        float safeYMin = marginPercentage;
+        float safeYMax = 1f - marginPercentage;
+
+        float randomX = Random.Range(safeXMin, safeXMax);
+        float randomY = Random.Range(safeYMin, safeYMax);
+
+        targetRect.anchorMin = new Vector2(randomX, randomY);
+        targetRect.anchorMax = new Vector2(randomX, randomY);
+        targetRect.pivot = new Vector2(0.5f, 0.5f);
+        targetRect.localPosition = Vector3.zero;
     }
 }

@@ -65,15 +65,6 @@ public class WallChallenge : MonoBehaviour
         ResetWall();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && !challengeSuccess && playerRb != null)
-        {
-            Vector2 knockbackDir = (player.position - transform.position).normalized;
-            playerRb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
-        }
-    }
-
     private void ResetWall()
     {
         transform.position = new Vector3(startXPosition, transform.position.y, transform.position.z);
@@ -81,4 +72,5 @@ public class WallChallenge : MonoBehaviour
         challengeStarted = false;
         challengeSuccess = false;
     }
+    
 }
