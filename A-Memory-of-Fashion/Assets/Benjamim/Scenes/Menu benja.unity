@@ -4692,12 +4692,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterOutfit
   vestidoEscolhido: 0
   sapatoEscolhido: 0
-  vestidoRenderer: {fileID: 0}
-  sapatoRenderer: {fileID: 0}
-  vestidoVermelho: {fileID: 0}
-  vestidoAzul: {fileID: 0}
-  sapatoVermelho: {fileID: 0}
-  sapatoAzul: {fileID: 0}
+  currentVestidoSprite: {fileID: 0}
+  currentSapatoSprite: {fileID: 0}
+  vestidoVermelho: {fileID: -394248566180102718, guid: b73dbc92a4113b648821ef9a971725d3,
+    type: 3}
+  vestidoAzul: {fileID: -5456051737728157696, guid: 0d3a935be2c3ea14da2dd9437f2ee3ed,
+    type: 3}
+  sapatoVermelho: {fileID: 6321790617348440895, guid: 8e9a14a459357454aaf0f5d10dcf4972,
+    type: 3}
+  sapatoAzul: {fileID: 187461674353026446, guid: 7abea4191fee2c441843533a8c4330f0,
+    type: 3}
 --- !u!4 &2029403230
 Transform:
   m_ObjectHideFlags: 0
