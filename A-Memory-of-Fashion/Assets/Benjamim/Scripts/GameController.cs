@@ -7,11 +7,12 @@ public class GameController : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private Button startButton;
+    [SerializeField] private ChallengeInputManager challengeUIManager;
 
-    [Header("Referências")]
+    [Header("Referencias")]
     [SerializeField] private WallChallenge[] todasAsParedes;
 
-    [Header("Áudio")]
+    [Header("audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] public AudioClip startSound;
 
@@ -50,6 +51,9 @@ public class GameController : MonoBehaviour
 
     internal void ShowChallengeUI(WallChallenge wallChallenge, string correctLetter)
     {
-        throw new NotImplementedException();
+        if (challengeUIManager != null)
+        {
+            challengeUIManager.SetupChallenge(wallChallenge, correctLetter);
+        }
     }
 }

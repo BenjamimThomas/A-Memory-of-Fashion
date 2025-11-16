@@ -1,56 +1,18 @@
 using UnityEngine;
-using TMPro; 
-using UnityEngine.UI; 
 
-public class ChallengeInputManager : MonoBehaviour
+public class WallActivator : MonoBehaviour
 {
-    public RectTransform targetRect;
-    public TextMeshProUGUI letterText; 
+    public WallChallenge parentWall;
 
-    [SerializeField] private float marginPercentage = 0.1f;
-    
-    private WallChallenge activeChallenge;
-    private string requiredLetter;
-    
-    public void SetupChallenge(WallChallenge challenge, string letter)
+    void Reset()
     {
-        activeChallenge = challenge;
-        requiredLetter = letter;
-        letterText.text = requiredLetter.ToUpper();
-        gameObject.SetActive(true);
+        if (parentWall == null) parentWall = GetComponentInParent<WallChallenge>();
     }
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (activeChallenge == null) return;
-
-        if (Input.GetKeyDown(requiredLetter))
-        {
-            HandleSuccess();
-        }
-    }
-
-    private void HandleSuccess()
-    {
-        MoveToRandomPosition();
-        activeChallenge.ChallengeSuccess();
-        activeChallenge = null;
-        gameObject.SetActive(false);
-    }
-
-    public void MoveToRandomPosition()
-    {
-        float safeXMin = marginPercentage;
-        float safeXMax = 1f - marginPercentage;
-        float safeYMin = marginPercentage;
-        float safeYMax = 1f - marginPercentage;
-
-        float randomX = Random.Range(safeXMin, safeXMax);
-        float randomY = Random.Range(safeYMin, safeYMax);
-
-        targetRect.anchorMin = new Vector2(randomX, randomY);
-        targetRect.anchorMax = new Vector2(randomX, randomY);
-        targetRect.pivot = new Vector2(0.5f, 0.5f);
-        targetRect.localPosition = Vector3.zero;
+        if (!other.CompareTag("Player")) return;
+        
+        parentWall.ActivateChallengeUI();
     }
 }
