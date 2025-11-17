@@ -51,5 +51,14 @@ TagManager:
   - name: Layer 3
     uniqueID: 4189426099
     locked: 0
+  - name: Player
+    uniqueID: 1916690295
+    locked: 0
+  - name: World
+    uniqueID: 1270198845
+    locked: 0
+  - name: ground
+    uniqueID: 3262881831
+    locked: 0
   m_RenderingLayers:
   - Default

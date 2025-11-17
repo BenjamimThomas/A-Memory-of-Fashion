@@ -25,7 +25,7 @@ public class WallChallenge : MonoBehaviour
         else
             Debug.LogError("ERRO: Player não encontrado na cena!");
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
         gameController = FindObjectOfType<GameController>();
         if (gameController == null)
