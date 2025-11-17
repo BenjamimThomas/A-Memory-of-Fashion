@@ -71,6 +71,8 @@ public class WallChallenge : MonoBehaviour
         gameObject.SetActive(false);
         challengeStarted = false;
         challengeSuccess = false;
+        VictoryDefeatManager.instance.RegisterWallCompleted();
+
     }
     
 }
