@@ -7,18 +7,30 @@ namespace Cainos.PixelArtTopDown_Basic
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
+        public AudioClip stepSound;
+        public float stepInterval = 0.35f;
+
         private Animator animator;
         private SpriteRenderer spriteRenderer;
+        private AudioSource audioSource;
+        private float stepTimer;
 
         private void Start()
         {
             animator = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            audioSource = GetComponent<AudioSource>();
+
+            if (audioSource != null && stepSound != null)
+            {
+                audioSource.clip = stepSound;
+            }
+
+            stepTimer = stepInterval;
         }
 
         private void Update()
         {
-            // Movimento --------------------------
             Vector2 dir = Vector2.zero;
             if (Input.GetKey(KeyCode.A))
             {
@@ -43,11 +55,25 @@ namespace Cainos.PixelArtTopDown_Basic
             }
 
             dir.Normalize();
-            animator.SetBool("IsMoving", dir.magnitude > 0);
+            bool isMoving = dir.magnitude > 0;
+            animator.SetBool("IsMoving", isMoving);
             GetComponent<Rigidbody2D>().linearVelocity = speed * dir;
 
-            // -------------------------------------
-            // 🔹 Teste: mudar a Ordem de Renderização (Sorting Order) com teclas numéricas
+            if (isMoving && audioSource != null)
+            {
+                stepTimer -= Time.deltaTime;
+
+                if (stepTimer <= 0)
+                {
+                    audioSource.Play();
+                    stepTimer = stepInterval;
+                }
+            }
+            else
+            {
+                stepTimer = stepInterval;
+            }
+
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 spriteRenderer.sortingOrder = 0;
@@ -55,7 +81,7 @@ namespace Cainos.PixelArtTopDown_Basic
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                spriteRenderer.sortingOrder = 1; // Usando números sequenciais para teste
+                spriteRenderer.sortingOrder = 1;
                 Debug.Log("Sorting Order -> 1");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -69,7 +95,6 @@ namespace Cainos.PixelArtTopDown_Basic
         {
             if (other.CompareTag("HighArea"))
             {
-                // Mude a ordem de renderização para um valor menor (renderiza "atrás" de objetos com 0 ou mais)
                 spriteRenderer.sortingOrder = -1;
             }
         }
@@ -78,7 +103,6 @@ namespace Cainos.PixelArtTopDown_Basic
         {
             if (other.CompareTag("HighArea"))
             {
-                // Retorne à ordem de renderização padrão
                 spriteRenderer.sortingOrder = 0;
             }
         }
