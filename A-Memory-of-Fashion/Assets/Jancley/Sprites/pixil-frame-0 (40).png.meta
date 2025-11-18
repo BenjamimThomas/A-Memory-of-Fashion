@@ -119,9 +119,9 @@ TextureImporter:
       name: pixil-frame-0 (40)_0
       rect:
         serializedVersion: 2
-        x: 89
+        x: 76
         y: 2099
-        width: 602
+        width: 620
         height: 901
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -141,10 +141,10 @@ TextureImporter:
       name: pixil-frame-0 (40)_1
       rect:
         serializedVersion: 2
-        x: 989
-        y: 2099
-        width: 602
-        height: 901
+        x: 967
+        y: 2086
+        width: 640
+        height: 914
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
