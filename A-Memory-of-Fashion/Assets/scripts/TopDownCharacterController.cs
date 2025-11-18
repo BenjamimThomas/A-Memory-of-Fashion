@@ -25,6 +25,7 @@ namespace Cainos.PixelArtTopDown_Basic
             if (audioSource != null && stepSound != null)
             {
                 audioSource.clip = stepSound;
+
                 audioSource.loop = false;
             }
 
@@ -67,26 +68,22 @@ namespace Cainos.PixelArtTopDown_Basic
 
                 if (stepTimer <= 0)
                 {
-                  
+ 
                     audioSource.Play();
                     stepTimer = stepInterval;
                 }
             }
             else
             {
-                // Se o personagem PAROU de se mover (isMoving é falso):
-
-                // 1. Reseta o timer para o próximo passo
                 stepTimer = stepInterval;
 
-                // 2. INTERROMPE qualquer som de passo que ainda esteja tocando
+                
                 if (audioSource != null && audioSource.isPlaying)
                 {
                     audioSource.Stop();
                 }
             }
 
-            // ... (Resto do código de Sorting Order)
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 spriteRenderer.sortingOrder = 0;
