@@ -1,59 +1,71 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System;
 
 public class GameController : MonoBehaviour
 {
-    [Header("UI")]
-    [SerializeField] private Button startButton;
-    [SerializeField] private ChallengeInputManager challengeUIManager;
+    public WallChallenge activeWall;
+    private string requiredKey;
+    private bool keyWasPressed;
 
-    [Header("Referencias")]
-    [SerializeField] private WallChallenge[] todasAsParedes;
+    [Header("Botoes de Desafio")]
+    public GameObject[] keyButtons;
+    public GameObject[] successButtons;
 
-    [Header("audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] public AudioClip startSound;
-
-    void Start()
+    void Update()
     {
-        audioSource = GetComponent<AudioSource>();
-
-        if (startButton != null)
+        if (activeWall != null && keyWasPressed == false)
         {
-            startButton.onClick.AddListener(StartGame);
-        }
-
-        todasAsParedes = FindObjectsOfType<WallChallenge>();
-    }
-
-    public void StartGame()
-    {
-        if (audioSource != null && startSound != null)
-        {
-            audioSource.PlayOneShot(startSound);
-        }
-
-        if (startButton != null)
-        {
-            startButton.gameObject.SetActive(false);
-        }
-
-        foreach (WallChallenge wall in todasAsParedes)
-        {
-            if (wall != null)
-            {
-                wall.StartMovement();
-            }
+            CheckInput();
         }
     }
 
-    internal void ShowChallengeUI(WallChallenge wallChallenge, string correctLetter)
+    private void CheckInput()
     {
-        if (challengeUIManager != null)
+        if (Input.GetKeyDown(requiredKey))
         {
-            challengeUIManager.SetupChallenge(wallChallenge, correctLetter);
+            keyWasPressed = true;
+            OnKeySuccess();
+        }
+    }
+
+    private void OnKeySuccess()
+    {
+        if (activeWall == null) return;
+
+        keyButtons[activeWall.wallIndex].SetActive(false);
+        successButtons[activeWall.wallIndex].SetActive(true);
+    }
+
+    public void ShowChallengeUI(WallChallenge wall, string key, int wallIndex)
+    {
+        activeWall = wall;
+        requiredKey = key.ToLower();
+        keyWasPressed = false;
+
+        DeactivateAllButtons();
+
+        keyButtons[wallIndex].SetActive(true);
+        keyButtons[wallIndex].GetComponentInChildren<Text>().text = key.ToUpper();
+    }
+
+    public void OnSuccessButtonClicked()
+    {
+        if (activeWall == null) return;
+
+        activeWall.ChallengeSuccess();
+        activeWall = null;
+        DeactivateAllButtons();
+    }
+
+    private void DeactivateAllButtons()
+    {
+        foreach (GameObject btn in keyButtons)
+        {
+            btn.SetActive(false);
+        }
+        foreach (GameObject btn in successButtons)
+        {
+            btn.SetActive(false);
         }
     }
 }
