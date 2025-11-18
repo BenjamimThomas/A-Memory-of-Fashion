@@ -20,7 +20,7 @@ public class ChallengeInputManager : MonoBehaviour
         if (successButton != null)
         {
             successButton.onClick.AddListener(FinalizeChallenge);
-            successButton.interactable = false; // Começa desabilitado
+            successButton.interactable = false; 
         }
     }
 
@@ -84,7 +84,7 @@ public class ChallengeInputManager : MonoBehaviour
         {
             activeChallenge.ChallengeSuccess(); 
             activeChallenge = null;
-            gameObject.SetActive(false); 
+            //  gameObject.SetActive(false); 
         }
     }
 }
