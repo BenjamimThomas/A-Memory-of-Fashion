@@ -10,6 +10,7 @@ public class WallChallenge : MonoBehaviour
 
     private string correctLetter = "w";
     private bool challengeSuccess = false;
+    public int wallIndex;
 
     [HideInInspector] public bool challengeStarted = false;
 
@@ -24,8 +25,6 @@ public class WallChallenge : MonoBehaviour
             playerRb = player.GetComponent<Rigidbody2D>();
         else
             Debug.LogError("ERRO: Player não encontrado na cena!");
-
-        //gameObject.SetActive(false);
 
         gameController = FindObjectOfType<GameController>();
         if (gameController == null)
@@ -56,7 +55,7 @@ public class WallChallenge : MonoBehaviour
     public void ActivateChallengeUI()
     {
         if (challengeStarted && !challengeSuccess && gameController != null)
-            gameController.ShowChallengeUI(this, correctLetter);
+            gameController.ShowChallengeUI(this, correctLetter, wallIndex); 
     }
 
     public void ChallengeSuccess()
@@ -72,7 +71,5 @@ public class WallChallenge : MonoBehaviour
         challengeStarted = false;
         challengeSuccess = false;
         VictoryDefeatManager.instance.RegisterWallCompleted();
-
     }
-    
 }
