@@ -3604,7 +3604,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1769503931}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: OnSuccessButtonClicked
+        m_MethodName: StartWalls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8191,6 +8191,8 @@ MonoBehaviour:
   - {fileID: 1538550338}
   - {fileID: 463260822}
   - {fileID: 59077959}
+  startButton: {fileID: 545221199}
+  allWalls: []
 --- !u!82 &1769503932
 AudioSource:
   m_ObjectHideFlags: 0

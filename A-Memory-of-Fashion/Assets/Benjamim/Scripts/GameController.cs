@@ -6,10 +6,24 @@ public class GameController : MonoBehaviour
     public WallChallenge activeWall;
     private string requiredKey;
     private bool keyWasPressed;
+    
 
     [Header("Botoes de Desafio")]
     public GameObject[] keyButtons;
     public GameObject[] successButtons;
+    public GameObject startButton;
+
+    public WallChallenge[] allWalls;
+
+    public void StartWalls()
+    {
+        foreach (var wall in allWalls)
+        {
+            wall.StartMovement();
+        }
+
+        startButton.SetActive(false);
+    }
 
     void Update()
     {

@@ -8,6 +8,7 @@ public class WallChallenge : MonoBehaviour
     [SerializeField] private float resetXPosition = -10f;
     [SerializeField] private float startXPosition = 10f;
 
+
     private string correctLetter = "w";
     private bool challengeSuccess = false;
     public int wallIndex;
