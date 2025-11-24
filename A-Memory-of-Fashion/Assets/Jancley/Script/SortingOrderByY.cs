@@ -15,7 +15,6 @@ public class SortingOrderByY : MonoBehaviour
 
     private void LateUpdate()
     {
-        // Inverte Y para que objetos mais baixos fiquem na frente
         spriteRenderer.sortingOrder = Mathf.RoundToInt(-(transform.position.y + offset) * 100);
     }
 }
