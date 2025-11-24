@@ -56,7 +56,6 @@ public class GameController : MonoBehaviour
         activeWall = null;
         DeactivateAllButtons();
     }
-
     private void DeactivateAllButtons()
     {
         foreach (GameObject btn in keyButtons)
