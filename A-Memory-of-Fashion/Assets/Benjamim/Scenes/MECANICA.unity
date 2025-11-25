@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpeed: 5
   knockbackForce: 2
-  resetXPosition: -14
+  resetXPosition: -14.5
   startXPosition: 10
   wallIndex: 3
   challengeStarted: 0
@@ -6664,7 +6664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpeed: 5
   knockbackForce: 2
-  resetXPosition: -19
+  resetXPosition: -18
   startXPosition: 10
   wallIndex: 8
   challengeStarted: 0
