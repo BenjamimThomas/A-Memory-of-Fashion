@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     [Header("Botões de Desafio")]
     public GameObject[] keyButtons;
     public GameObject[] successButtons;
+    [Header("Botão de Start")]
+    public GameObject startButton;
 
     private TextMeshProUGUI[] keyButtonTexts;
 
@@ -30,6 +32,7 @@ public class GameController : MonoBehaviour
     public void StartWalls()
     {
         WallChallenge[] allWalls = FindObjectsOfType<WallChallenge>();
+        startButton.SetActive(false);
 
         foreach (WallChallenge wall in allWalls)
         {
