@@ -1295,7 +1295,8 @@ MonoBehaviour:
   dialogueManager: {fileID: 1120398350}
   radioLines:
   - characterName: LOCUTOR
-    lineText: "Boa noite, ouvintes. Aqui \xE9 a sua voz na madrugada."
+    lineText: "Boa noite, ouvintes. Aqui \xE9 a sua voz na madrugada.\n\n\n-Clique
+      na Dialogue box e aperte space no teclado-"
   - characterName: LOCUTOR
     lineText: "A hist\xF3ria de Luna vai entrar em um territ\xF3rio perigosamente
       secreto."
@@ -1625,7 +1626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 23.900024, y: 3.5149841}
+  m_AnchoredPosition: {x: 23.900024, y: 3.5150146}
   m_SizeDelta: {x: -186.64, y: 7.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879544319
@@ -2243,7 +2244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30.149994, y: -161.5}
+  m_AnchoredPosition: {x: -30.150024, y: -161.5}
   m_SizeDelta: {x: -294.75, y: -353.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1398274163
@@ -2825,7 +2826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -73.20798, y: -6.6083984}
+  m_AnchoredPosition: {x: -73.20801, y: -6.6083984}
   m_SizeDelta: {x: -395.97, y: -58.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508098942
