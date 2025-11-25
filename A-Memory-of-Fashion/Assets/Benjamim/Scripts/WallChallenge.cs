@@ -70,9 +70,10 @@ public class WallChallenge : MonoBehaviour
     private void ResetWall()
     {
         transform.position = new Vector3(startXPosition, transform.position.y, transform.position.z);
-        gameObject.SetActive(false);
+
         challengeStarted = false;
         challengeSuccess = false;
+
         VictoryDefeatManager.instance.RegisterWallCompleted();
     }
 }

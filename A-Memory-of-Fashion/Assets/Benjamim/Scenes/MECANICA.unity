@@ -3488,7 +3488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpeed: 5
   knockbackForce: 2
-  resetXPosition: -16
+  resetXPosition: -17
   startXPosition: 10
   wallIndex: 6
   challengeStarted: 0
@@ -4884,7 +4884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpeed: 5
   knockbackForce: 2
-  resetXPosition: -12
+  resetXPosition: -14
   startXPosition: 10
   wallIndex: 2
   challengeStarted: 0
@@ -7510,8 +7510,8 @@ Transform:
   m_GameObject: {fileID: 1549249993}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1844, y: -3.8498, z: 9.93}
-  m_LocalScale: {x: 0.79531723, y: 1.05001, z: 0}
+  m_LocalPosition: {x: 5.1844, y: -3.7915, z: 9.93}
+  m_LocalScale: {x: 0.79531723, y: 1.3344576, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507575529}
@@ -8091,7 +8091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpeed: 5
   knockbackForce: 2
-  resetXPosition: -15
+  resetXPosition: -16.5
   startXPosition: 10
   wallIndex: 5
   challengeStarted: 0
@@ -8191,8 +8191,6 @@ MonoBehaviour:
   - {fileID: 1538550338}
   - {fileID: 463260822}
   - {fileID: 59077959}
-  startButton: {fileID: 545221199}
-  allWalls: []
 --- !u!82 &1769503932
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9976,7 +9974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpeed: 5
   knockbackForce: 2
-  resetXPosition: -14
+  resetXPosition: -16
   startXPosition: 10
   wallIndex: 4
   challengeStarted: 0
@@ -10036,7 +10034,7 @@ Transform:
   m_GameObject: {fileID: 2074917006}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.18, y: -2.21, z: 10.013791}
+  m_LocalPosition: {x: -2.68, y: -2.14, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10187,7 +10185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 7
+  wallSpeed: 5
   knockbackForce: 2
   resetXPosition: -10
   startXPosition: 12

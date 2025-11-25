@@ -1,28 +1,42 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
     public WallChallenge activeWall;
     private string requiredKey;
     private bool keyWasPressed;
-    
 
-    [Header("Botoes de Desafio")]
+    [Header("Botões de Desafio")]
     public GameObject[] keyButtons;
     public GameObject[] successButtons;
-    public GameObject startButton;
 
-    public WallChallenge[] allWalls;
+    private TextMeshProUGUI[] keyButtonTexts;
 
+    void Awake()
+    {
+        keyButtonTexts = new TextMeshProUGUI[keyButtons.Length];
+
+        for (int i = 0; i < keyButtons.Length; i++)
+        {
+            keyButtonTexts[i] = keyButtons[i].GetComponentInChildren<TextMeshProUGUI>(true);
+
+            if (keyButtonTexts[i] == null)
+            {
+                Debug.LogError($"ERRO: O botão {i} não possui TextMeshProUGUI como filho!");
+            }
+        }
+    }
     public void StartWalls()
     {
-        foreach (var wall in allWalls)
+        WallChallenge[] allWalls = FindObjectsOfType<WallChallenge>();
+
+        foreach (WallChallenge wall in allWalls)
         {
             wall.StartMovement();
         }
 
-        startButton.SetActive(false);
+        Debug.Log("Todas as paredes foram iniciadas!");
     }
 
     void Update()
@@ -59,7 +73,8 @@ public class GameController : MonoBehaviour
         DeactivateAllButtons();
 
         keyButtons[wallIndex].SetActive(true);
-        keyButtons[wallIndex].GetComponentInChildren<Text>().text = key.ToUpper();
+
+        keyButtonTexts[wallIndex].text = key.ToUpper();
     }
 
     public void OnSuccessButtonClicked()
@@ -70,15 +85,13 @@ public class GameController : MonoBehaviour
         activeWall = null;
         DeactivateAllButtons();
     }
+
     private void DeactivateAllButtons()
     {
         foreach (GameObject btn in keyButtons)
-        {
             btn.SetActive(false);
-        }
+
         foreach (GameObject btn in successButtons)
-        {
             btn.SetActive(false);
-        }
     }
 }
