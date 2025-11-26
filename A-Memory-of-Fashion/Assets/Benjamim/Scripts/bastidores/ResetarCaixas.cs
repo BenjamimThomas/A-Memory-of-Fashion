@@ -30,6 +30,12 @@ public class ResetarCaixas : MonoBehaviour
         Inventory.instance.temSapatoVermelho = false;
         Inventory.instance.temSapatoAzul = false;
 
+        PlayerPrefs.SetInt("VestidoVermelho", 0);
+        PlayerPrefs.SetInt("VestidoAzul", 0);
+        PlayerPrefs.SetInt("SapatoVermelho", 0);
+        PlayerPrefs.SetInt("SapatoAzul", 0);
+        PlayerPrefs.Save();
+
         slotVestidoVermelho.SetActive(false);
         slotVestidoAzul.SetActive(false);
         slotSapatoVermelho.SetActive(false);

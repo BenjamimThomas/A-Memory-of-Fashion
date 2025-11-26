@@ -5,7 +5,9 @@ using System.Collections.Generic;
 public class RadioInteractable : MonoBehaviour 
 {
     [Header("Referência ao Gerenciador de Diálogo")]
-    public DialogueManager dialogueManager; 
+    public DialogueManager dialogueManager;
+
+    public static bool radioFoiClicado = false;
 
     [Header("Linhas de diálogo que este rádio deve tocar")]
     public List<DialogueLine> radioLines = new List<DialogueLine>();
@@ -15,6 +17,9 @@ public class RadioInteractable : MonoBehaviour
     void Awake()
     {
         radioButton = GetComponent<Button>();
+
+        radioFoiClicado = PlayerPrefs.GetInt("RadioClicado", 0) == 1;
+
         if (radioButton != null)
         {
             radioButton.onClick.AddListener(PlayRadioDialogue);
@@ -25,11 +30,15 @@ public class RadioInteractable : MonoBehaviour
         }
     }
 
+
     void PlayRadioDialogue()
     {
         if (dialogueManager != null)
         {
             dialogueManager.StartDialogue(radioLines);
+            radioFoiClicado = true;
+            PlayerPrefs.SetInt("RadioClicado", 1);
+            PlayerPrefs.Save();
         }
         else
         {
