@@ -11,8 +11,6 @@ public class TeleportAposRadio : MonoBehaviour
     void Update()
     {
         if (!gameObject.activeSelf && RadioInteractable.radioFoiClicado)
-        {
-            gameObject.SetActive(true);
-        }
+            gameObject.SetActive(true); 
     }
 }
