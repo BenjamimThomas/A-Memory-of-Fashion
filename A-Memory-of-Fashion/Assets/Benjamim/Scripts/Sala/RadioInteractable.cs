@@ -8,6 +8,8 @@ public class RadioInteractable : MonoBehaviour
     public DialogueManager dialogueManager;
 
     public static bool radioFoiClicado = false;
+    public GameObject spriteParaSumir;
+    public GameObject botaoCorredor;
 
     [Header("Linhas de diálogo que este rádio deve tocar")]
     public List<DialogueLine> radioLines = new List<DialogueLine>();
@@ -39,6 +41,8 @@ public class RadioInteractable : MonoBehaviour
             radioFoiClicado = true;
             PlayerPrefs.SetInt("RadioClicado", 1);
             PlayerPrefs.Save();
+            spriteParaSumir.SetActive(false);
+            botaoCorredor.SetActive(true);
         }
         else
         {
