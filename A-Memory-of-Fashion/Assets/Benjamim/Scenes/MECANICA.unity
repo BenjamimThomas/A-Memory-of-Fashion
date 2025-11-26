@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 31378335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71.34, y: -2.07, z: 10.013791}
+  m_LocalPosition: {x: 75.06, y: -2.07, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -276,7 +276,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -16
   startXPosition: 10
-  wallIndex: 7
+  wallIndex: 6
   challengeStarted: 0
 --- !u!50 &31378340
 Rigidbody2D:
@@ -1455,7 +1455,7 @@ Transform:
   m_GameObject: {fileID: 217762394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.18, y: -2.07, z: 10.013791}
+  m_LocalPosition: {x: 30.7, y: -2.07, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1583,7 +1583,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -14.5
   startXPosition: 10
-  wallIndex: 3
+  wallIndex: 2
   challengeStarted: 0
 --- !u!50 &217762399
 Rigidbody2D:
@@ -4068,7 +4068,7 @@ Transform:
   m_GameObject: {fileID: 539215158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.149998, y: -2.03, z: 10.013791}
+  m_LocalPosition: {x: 63.74, y: -2.03, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4196,7 +4196,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -17
   startXPosition: 10
-  wallIndex: 6
+  wallIndex: 5
   challengeStarted: 0
 --- !u!50 &539215163
 Rigidbody2D:
@@ -5575,7 +5575,7 @@ Transform:
   m_GameObject: {fileID: 852407430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.249998, y: -2.04, z: 10.013791}
+  m_LocalPosition: {x: 18.1, y: -2.04, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5703,7 +5703,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -14
   startXPosition: 10
-  wallIndex: 2
+  wallIndex: 1
   challengeStarted: 0
 --- !u!50 &852407435
 Rigidbody2D:
@@ -7538,7 +7538,7 @@ Transform:
   m_GameObject: {fileID: 1350068227}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.03, y: -2.07, z: 10.013791}
+  m_LocalPosition: {x: 85.78, y: -2.07, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7664,9 +7664,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpeed: 5
   knockbackForce: 2
-  resetXPosition: -18
+  resetXPosition: -19
   startXPosition: 10
-  wallIndex: 8
+  wallIndex: 7
   challengeStarted: 0
 --- !u!50 &1350068232
 Rigidbody2D:
@@ -9154,7 +9154,7 @@ Transform:
   m_GameObject: {fileID: 1755587056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.899998, y: -2.03, z: 10.013791}
+  m_LocalPosition: {x: 51.28, y: -2.03, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9282,7 +9282,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -16.5
   startXPosition: 10
-  wallIndex: 5
+  wallIndex: 4
   challengeStarted: 0
 --- !u!50 &1755587061
 Rigidbody2D:
@@ -9913,7 +9913,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -19
   startXPosition: 10
-  wallIndex: 9
+  wallIndex: 8
   challengeStarted: 0
 --- !u!50 &1853146994
 Rigidbody2D:
@@ -10575,7 +10575,7 @@ Transform:
   m_GameObject: {fileID: 2001388240}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.45, y: -2.03, z: 10.013791}
+  m_LocalPosition: {x: 99.62, y: -2.03, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10699,11 +10699,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 4
+  wallSpeed: 5
   knockbackForce: 2
   resetXPosition: -20
   startXPosition: 10
-  wallIndex: 10
+  wallIndex: 9
   challengeStarted: 0
 --- !u!50 &2001388245
 Rigidbody2D:
@@ -11260,7 +11260,7 @@ Transform:
   m_GameObject: {fileID: 2064610455}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.78, y: -2.07, z: 10.013791}
+  m_LocalPosition: {x: 42.5, y: -2.07, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11388,7 +11388,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -16
   startXPosition: 10
-  wallIndex: 4
+  wallIndex: 3
   challengeStarted: 0
 --- !u!50 &2064610460
 Rigidbody2D:
@@ -11446,7 +11446,7 @@ Transform:
   m_GameObject: {fileID: 2074917006}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: -2.14, z: 10.013791}
+  m_LocalPosition: {x: 5.47, y: -2.14, z: 10.013791}
   m_LocalScale: {x: 1, y: 5.5645, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11601,7 +11601,7 @@ MonoBehaviour:
   knockbackForce: 2
   resetXPosition: -10
   startXPosition: 12
-  wallIndex: 1
+  wallIndex: 0
   challengeStarted: 0
 --- !u!1 &2093332045
 GameObject:
