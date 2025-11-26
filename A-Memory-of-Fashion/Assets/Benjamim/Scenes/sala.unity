@@ -1296,7 +1296,7 @@ MonoBehaviour:
   radioLines:
   - characterName: LOCUTOR
     lineText: "Boa noite, ouvintes. Aqui \xE9 a sua voz na madrugada.\n\n\n-Clique
-      na Dialogue box e aperte space no teclado-"
+      na caixa de di\xE1logo e aperte space no teclado-"
   - characterName: LOCUTOR
     lineText: "A hist\xF3ria de Luna vai entrar em um territ\xF3rio perigosamente
       secreto."

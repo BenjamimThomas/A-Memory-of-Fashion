@@ -82,7 +82,6 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void FixedUpdate()
         {
-            // MOVIMENTO CORRETO SEM QUEBRAR FÍSICA
             rb.MovePosition(rb.position + inputDir * speed * Time.fixedDeltaTime);
         }
 
