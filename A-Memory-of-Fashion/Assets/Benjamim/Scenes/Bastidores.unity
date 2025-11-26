@@ -46825,6 +46825,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3177150410916164412, guid: 6dffed31896a41041acac6477d8ee28a,
+        type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177150410916164412, guid: 6dffed31896a41041acac6477d8ee28a,
+        type: 3}
+      propertyPath: stepInterval
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3177150410916164415, guid: 6dffed31896a41041acac6477d8ee28a,
         type: 3}
       propertyPath: m_Size.x
