@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
     public class TopDownCharacterController : MonoBehaviour
     {
-        public float speed;
+        public float speed = 3f;
         public AudioClip stepSound;
         public float stepInterval = 0.35f;
 
@@ -14,18 +12,20 @@ namespace Cainos.PixelArtTopDown_Basic
         private SpriteRenderer spriteRenderer;
         private AudioSource audioSource;
         private float stepTimer;
+        private Rigidbody2D rb;
+
+        private Vector2 inputDir;
 
         private void Start()
         {
             animator = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-
             audioSource = GetComponent<AudioSource>();
+            rb = GetComponent<Rigidbody2D>();
 
             if (audioSource != null && stepSound != null)
             {
                 audioSource.clip = stepSound;
-
                 audioSource.loop = false;
             }
 
@@ -35,6 +35,7 @@ namespace Cainos.PixelArtTopDown_Basic
         private void Update()
         {
             Vector2 dir = Vector2.zero;
+
             if (Input.GetKey(KeyCode.A))
             {
                 dir.x = -1;
@@ -58,17 +59,41 @@ namespace Cainos.PixelArtTopDown_Basic
             }
 
             dir.Normalize();
+            inputDir = dir;
+
             bool isMoving = dir.magnitude > 0;
             animator.SetBool("IsMoving", isMoving);
-            GetComponent<Rigidbody2D>().linearVelocity = speed * dir;
 
+            HandleSteps(isMoving);
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                spriteRenderer.sortingOrder = 0;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                spriteRenderer.sortingOrder = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                spriteRenderer.sortingOrder = 2;
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            // MOVIMENTO CORRETO SEM QUEBRAR FÍSICA
+            rb.MovePosition(rb.position + inputDir * speed * Time.fixedDeltaTime);
+        }
+
+        private void HandleSteps(bool isMoving)
+        {
             if (isMoving && audioSource != null)
             {
                 stepTimer -= Time.deltaTime;
 
                 if (stepTimer <= 0)
                 {
- 
                     audioSource.Play();
                     stepTimer = stepInterval;
                 }
@@ -77,27 +102,10 @@ namespace Cainos.PixelArtTopDown_Basic
             {
                 stepTimer = stepInterval;
 
-                
                 if (audioSource != null && audioSource.isPlaying)
                 {
                     audioSource.Stop();
                 }
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                spriteRenderer.sortingOrder = 0;
-                Debug.Log("Sorting Order -> 0");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                spriteRenderer.sortingOrder = 1;
-                Debug.Log("Sorting Order -> 1");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                spriteRenderer.sortingOrder = 2;
-                Debug.Log("Sorting Order -> 2");
             }
         }
 
