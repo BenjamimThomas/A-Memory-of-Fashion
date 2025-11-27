@@ -4,10 +4,8 @@ public class WallChallenge : MonoBehaviour
 {
     [Header("Wall Settings")]
     [SerializeField] private float wallSpeed = 2f;
-    [SerializeField] private float knockbackForce = 8f;
     [SerializeField] private float resetXPosition = -10f;
     [SerializeField] private float startXPosition = 10f;
-
 
     private string correctLetter = "w";
     private bool challengeSuccess = false;
@@ -15,19 +13,12 @@ public class WallChallenge : MonoBehaviour
 
     [HideInInspector] public bool challengeStarted = false;
 
-    private Transform player;
-    private Rigidbody2D playerRb;
     private GameController gameController;
+    private Rigidbody2D rb;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        if (player != null)
-            playerRb = player.GetComponent<Rigidbody2D>();
-        else
-            Debug.LogError("ERRO: Player não encontrado na cena!");
-
-
+        rb = GetComponent<Rigidbody2D>(); 
 
         gameController = FindObjectOfType<GameController>();
         if (gameController == null)
@@ -38,27 +29,34 @@ public class WallChallenge : MonoBehaviour
     {
         if (!challengeStarted) return;
 
-        transform.Translate(Vector2.left * wallSpeed * Time.deltaTime);
 
-        if (transform.position.x <= resetXPosition)
+        
+        rb.MovePosition(rb.position + Vector2.left * wallSpeed * Time.deltaTime);
+
+        if (rb.position.x <= resetXPosition)
             ResetWall();
     }
 
     public void StartMovement()
     {
+        this.enabled = true;
         gameObject.SetActive(true);
+
         challengeStarted = true;
         challengeSuccess = false;
 
-        string[] movementLetters = { "w", "a", "s", "d" };
-        int randomIndex = Random.Range(0, movementLetters.Length);
-        correctLetter = movementLetters[randomIndex];
+        string[] letters = { "w", "a", "s", "d" };
+        correctLetter = letters[Random.Range(0, letters.Length)];
+
+
+        Debug.Log(gameObject.name + " START MOVEMENT! posX = " + transform.position.x);
+
     }
 
     public void ActivateChallengeUI()
     {
-        if (challengeStarted && !challengeSuccess && gameController != null)
-            gameController.ShowChallengeUI(this, correctLetter, wallIndex); 
+        if (challengeStarted && !challengeSuccess)
+            gameController.ShowChallengeUI(this, correctLetter, wallIndex);
     }
 
     public void ChallengeSuccess()
@@ -69,11 +67,18 @@ public class WallChallenge : MonoBehaviour
 
     private void ResetWall()
     {
-        transform.position = new Vector3(startXPosition, transform.position.y, transform.position.z);
+        rb.position = new Vector2(startXPosition, rb.position.y);
 
         challengeStarted = false;
         challengeSuccess = false;
+    }
 
-        VictoryDefeatManager.instance.RegisterWallCompleted();
+    public void ResetForRestart()
+    {
+        rb.position = new Vector2(startXPosition, rb.position.y);
+        challengeStarted = false;
+        challengeSuccess = false;
+        Debug.Log(gameObject.name + " RESET! posX = " + transform.position.x);
+
     }
 }

@@ -3,17 +3,21 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public WallChallenge activeWall;
-    private string requiredKey;
-    private bool keyWasPressed;
+    [Header("Walls")]
+    public WallChallenge[] walls;   // Todas as paredes via Inspector
 
-    [Header("Botões de Desafio")]
+    [Header("Botoes de Desafio")]
     public GameObject[] keyButtons;
     public GameObject[] successButtons;
-    [Header("Botão de Start")]
+
+    [Header("Botao Start")]
     public GameObject startButton;
 
     private TextMeshProUGUI[] keyButtonTexts;
+
+    private WallChallenge activeWall;
+    private string requiredKey;
+    private bool keyWasPressed;
 
     void Awake()
     {
@@ -24,30 +28,56 @@ public class GameController : MonoBehaviour
             keyButtonTexts[i] = keyButtons[i].GetComponentInChildren<TextMeshProUGUI>(true);
 
             if (keyButtonTexts[i] == null)
-            {
-                Debug.LogError($"ERRO: O botão {i} não possui TextMeshProUGUI como filho!");
-            }
+                Debug.LogError($"ERRO: O botao {i} nao possui TextMeshProUGUI como filho!");
         }
     }
-    public void StartWalls()
+
+    void Start()
     {
-        WallChallenge[] allWalls = FindObjectsOfType<WallChallenge>();
-        startButton.SetActive(false);
-
-        foreach (WallChallenge wall in allWalls)
-        {
-            wall.StartMovement();
-        }
-
-        Debug.Log("Todas as paredes foram iniciadas!");
+        DeactivateAllButtons();
     }
 
     void Update()
     {
         if (activeWall != null && keyWasPressed == false)
-        {
             CheckInput();
+    }
+
+    public void StartAllWalls()
+    {
+        foreach (var wall in walls)
+        {
+            wall.StartMovement();
         }
+
+        startButton.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        Debug.Log("RESTART chamado");
+
+        foreach (var wall in walls)
+        {
+            wall.ResetForRestart();
+            wall.StartMovement();
+        }
+
+        DeactivateAllButtons();
+        activeWall = null;
+        keyWasPressed = false;
+
+        startButton.SetActive(false);
+    }
+
+    public void OnStartButton()
+    {
+        StartAllWalls();
+    }
+
+    public void OnRestartButton()
+    {
+        RestartGame();
     }
 
     private void CheckInput()
@@ -74,9 +104,7 @@ public class GameController : MonoBehaviour
         keyWasPressed = false;
 
         DeactivateAllButtons();
-
         keyButtons[wallIndex].SetActive(true);
-
         keyButtonTexts[wallIndex].text = key.ToUpper();
     }
 
