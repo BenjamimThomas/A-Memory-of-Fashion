@@ -2,21 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class RadioInteractable : MonoBehaviour 
+public class RadioInteractable : MonoBehaviour
 {
-    [Header("Referência ao Gerenciador de Diálogo")]
     public DialogueManager dialogueManager;
-
     public static bool radioFoiClicado = false;
 
-    [Header("Botão do corredor")]
     public GameObject botaoCorredor;
-
-    [Header("Linhas de diálogo do rádio")]
     public List<DialogueLine> radioLines = new List<DialogueLine>();
 
     private Button radioButton;
-    private Button corredorBtn;
 
     void Awake()
     {
@@ -24,12 +18,15 @@ public class RadioInteractable : MonoBehaviour
 
         radioFoiClicado = PlayerPrefs.GetInt("RadioClicado", 0) == 1;
 
-        corredorBtn = botaoCorredor.GetComponent<Button>();
-
         if (radioFoiClicado)
+        {
             botaoCorredor.SetActive(true);
+            botaoCorredor.GetComponent<Button>().interactable = true;
+        }
         else
+        {
             botaoCorredor.SetActive(false);
+        }
 
         radioButton.onClick.AddListener(PlayRadioDialogue);
     }
@@ -43,6 +40,6 @@ public class RadioInteractable : MonoBehaviour
         PlayerPrefs.Save();
 
         botaoCorredor.SetActive(true);
-        corredorBtn.interactable = true;
+        botaoCorredor.GetComponent<Button>().interactable = true;
     }
 }
