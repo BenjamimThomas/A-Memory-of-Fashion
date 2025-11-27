@@ -8,13 +8,15 @@ public class RadioInteractable : MonoBehaviour
     public DialogueManager dialogueManager;
 
     public static bool radioFoiClicado = false;
-    public GameObject spriteParaSumir;
+
+    [Header("Botão do corredor")]
     public GameObject botaoCorredor;
 
-    [Header("Linhas de diálogo que este rádio deve tocar")]
+    [Header("Linhas de diálogo do rádio")]
     public List<DialogueLine> radioLines = new List<DialogueLine>();
 
     private Button radioButton;
+    private Button corredorBtn;
 
     void Awake()
     {
@@ -22,31 +24,25 @@ public class RadioInteractable : MonoBehaviour
 
         radioFoiClicado = PlayerPrefs.GetInt("RadioClicado", 0) == 1;
 
-        if (radioButton != null)
-        {
-            radioButton.onClick.AddListener(PlayRadioDialogue);
-        }
-        else
-        {
-            Debug.LogError("Nenhum componente Button encontrado neste objeto!");
-        }
-    }
+        corredorBtn = botaoCorredor.GetComponent<Button>();
 
+        if (radioFoiClicado)
+            botaoCorredor.SetActive(true);
+        else
+            botaoCorredor.SetActive(false);
+
+        radioButton.onClick.AddListener(PlayRadioDialogue);
+    }
 
     void PlayRadioDialogue()
     {
-        if (dialogueManager != null)
-        {
-            dialogueManager.StartDialogue(radioLines);
-            radioFoiClicado = true;
-            PlayerPrefs.SetInt("RadioClicado", 1);
-            PlayerPrefs.Save();
-            spriteParaSumir.SetActive(false);
-            botaoCorredor.SetActive(true);
-        }
-        else
-        {
-            Debug.LogWarning("DialogueManager não atribuído no inspector!");
-        }
+        dialogueManager.StartDialogue(radioLines);
+
+        radioFoiClicado = true;
+        PlayerPrefs.SetInt("RadioClicado", 1);
+        PlayerPrefs.Save();
+
+        botaoCorredor.SetActive(true);
+        corredorBtn.interactable = true;
     }
 }
