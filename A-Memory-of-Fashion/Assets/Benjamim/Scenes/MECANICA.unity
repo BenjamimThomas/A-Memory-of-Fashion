@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 22
   resetXPosition: -16
   startXPosition: 10
   wallIndex: 6
@@ -285,7 +285,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31378335}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 20
   resetXPosition: -14.5
   startXPosition: 10
   wallIndex: 2
@@ -1710,7 +1710,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217762394}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4556,7 +4556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 22
   resetXPosition: -17
   startXPosition: 10
   wallIndex: 5
@@ -4569,7 +4569,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539215158}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -6298,7 +6298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 20
   resetXPosition: -14
   startXPosition: 10
   wallIndex: 1
@@ -6311,7 +6311,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852407430}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -8497,7 +8497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 22
   resetXPosition: -19
   startXPosition: 10
   wallIndex: 7
@@ -8510,7 +8510,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350068227}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10466,7 +10466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 22
   resetXPosition: -16.5
   startXPosition: 10
   wallIndex: 4
@@ -10479,7 +10479,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755587056}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -11106,7 +11106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 22
   resetXPosition: -19
   startXPosition: 10
   wallIndex: 8
@@ -11119,7 +11119,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853146989}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -12013,7 +12013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 22
   resetXPosition: -20
   startXPosition: 10
   wallIndex: 9
@@ -12026,7 +12026,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001388240}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -12756,7 +12756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 22
   resetXPosition: -16
   startXPosition: 10
   wallIndex: 3
@@ -12769,7 +12769,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064610455}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -12937,7 +12937,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074917006}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -12968,7 +12968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 10
+  wallSpeed: 20
   resetXPosition: -10
   startXPosition: 12
   wallIndex: 0
