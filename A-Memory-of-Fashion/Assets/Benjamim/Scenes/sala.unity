@@ -1057,8 +1057,8 @@ Transform:
   m_GameObject: {fileID: 336219984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.539005, y: -48.312008, z: -4050}
-  m_LocalScale: {x: 27.431885, y: 58.09058, z: 45}
+  m_LocalPosition: {x: 55.539005, y: -48.76, z: -4050}
+  m_LocalScale: {x: 27.431885, y: 58.08477, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1242141582}
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RadioInteractable
   dialogueManager: {fileID: 1120398350}
   spriteParaSumir: {fileID: 336219984}
-  botaoCorredor: {fileID: 0}
+  botaoCorredor: {fileID: 1608747331}
   radioLines:
   - characterName: LOCUTOR
     lineText: "Boa noite, ouvintes. Aqui \xE9 a sua voz na madrugada.\n\n\n-Clique
@@ -3289,8 +3289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55.421, y: -49.51}
-  m_SizeDelta: {x: 146.77, y: 306.4}
+  m_AnchoredPosition: {x: 55.421, y: -47.28}
+  m_SizeDelta: {x: 146.77, y: 310.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608747333
 MonoBehaviour:
