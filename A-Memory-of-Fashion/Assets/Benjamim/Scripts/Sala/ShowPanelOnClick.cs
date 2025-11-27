@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class ToggleAnyPanel : MonoBehaviour
 {
-    [Header("Painel que será aberto/fechado")]
-    public GameObject panel; 
+    public GameObject panel;
+    public GameObject[] paineisParaFechar;
 
     public void Toggle()
     {
-        if (panel == null)
-        {
-            Debug.LogWarning($"Nenhum painel atribuído ao botão {gameObject.name}!");
-            return;
-        }
+        foreach (var p in paineisParaFechar)
+            if (p != null)
+                p.SetActive(false);
 
-        panel.SetActive(!panel.activeSelf); 
+        panel.SetActive(!panel.activeSelf);
     }
 }

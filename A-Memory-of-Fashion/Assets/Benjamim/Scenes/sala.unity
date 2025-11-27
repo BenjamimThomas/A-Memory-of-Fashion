@@ -164,6 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowPanelOnClick
   panel: {fileID: 879544317}
+  paineisParaFechar:
+  - {fileID: 1742860603}
+  - {fileID: 1508098940}
 --- !u!1 &117282672
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,6 +3458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToggleAnyPanel
   panel: {fileID: 1508098940}
+  paineisParaFechar: []
 --- !u!4 &1603697258
 Transform:
   m_ObjectHideFlags: 0
@@ -3921,6 +3925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToggleAnyPanel
   panel: {fileID: 1742860603}
+  paineisParaFechar: []
 --- !u!1 &2139265021
 GameObject:
   m_ObjectHideFlags: 0

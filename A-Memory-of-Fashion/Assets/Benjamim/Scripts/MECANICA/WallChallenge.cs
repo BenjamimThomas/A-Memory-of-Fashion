@@ -60,10 +60,14 @@ public class WallChallenge : MonoBehaviour
     }
 
     public void ChallengeSuccess()
-    {
-        challengeSuccess = true;
-        ResetWall();
-    }
+{
+    challengeSuccess = true;
+
+    if (VictoryDefeatManager.instance != null)
+        VictoryDefeatManager.instance.RegisterWallCompleted();
+
+    ResetWall();
+}
 
     private void ResetWall()
     {
