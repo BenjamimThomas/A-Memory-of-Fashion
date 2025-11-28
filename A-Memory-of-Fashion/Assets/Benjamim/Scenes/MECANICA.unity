@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16
+  wallSpeed: 6
   resetXPosition: -16
   startXPosition: 10
   wallIndex: 6
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16
+  wallSpeed: 6
   resetXPosition: -14.5
   startXPosition: 10
   wallIndex: 2
@@ -4562,7 +4562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16
+  wallSpeed: 6
   resetXPosition: -17
   startXPosition: 10
   wallIndex: 5
@@ -6304,7 +6304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16
+  wallSpeed: 6
   resetXPosition: -14
   startXPosition: 10
   wallIndex: 1
@@ -8507,7 +8507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16.5
+  wallSpeed: 6
   resetXPosition: -19
   startXPosition: 10
   wallIndex: 7
@@ -10484,7 +10484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16
+  wallSpeed: 6
   resetXPosition: -16.5
   startXPosition: 10
   wallIndex: 4
@@ -11124,7 +11124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16.5
+  wallSpeed: 6
   resetXPosition: -19
   startXPosition: 10
   wallIndex: 8
@@ -12033,7 +12033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16.5
+  wallSpeed: 6
   resetXPosition: -20
   startXPosition: 10
   wallIndex: 9
@@ -12776,7 +12776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16
+  wallSpeed: 6
   resetXPosition: -16
   startXPosition: 10
   wallIndex: 3
@@ -12988,7 +12988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25641dedd31332d40a30e1eb339d6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSpeed: 16
+  wallSpeed: 6
   resetXPosition: -10
   startXPosition: 12
   wallIndex: 0
