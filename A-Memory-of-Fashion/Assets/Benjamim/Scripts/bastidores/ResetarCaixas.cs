@@ -42,8 +42,15 @@ public class ResetarCaixas : MonoBehaviour
         slotSapatoAzul.SetActive(false);
 
         caixaVestidoVermelho.SetActive(true);
+        caixaVestidoVermelho.GetComponent<ItemPickup>().enabled = true;
+
         caixaVestidoAzul.SetActive(true);
+        caixaVestidoAzul.GetComponent<ItemPickup>().enabled = true;
+
         caixaSapatoVermelho.SetActive(true);
+        caixaSapatoVermelho.GetComponent<ItemPickup>().enabled = true;
+
         caixaSapatoAzul.SetActive(true);
+        caixaSapatoAzul.GetComponent<ItemPickup>().enabled = true;
     }
 }
